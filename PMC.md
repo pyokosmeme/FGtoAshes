@@ -41,9 +41,9 @@ J > 0
     aligned                anti-aligned                                         aligned    
 ```
 
-energy is the energy. energy is like water. water is like information. everything flows to a sink, because that's low energy.
+E is the energy. E is like water. water is like information. everything flows to a sink, because that's low energy.
 
-low energy, for lack of a better word, is good. low energy is right, low energy works. low energy clarifies, cuts through the devolution post-modern digital insanity and clarifies your place in the universe.
+low E, for lack of a better word, is good. low E is right, low E works. low E clarifies, cuts through the devolution post-modern digital insanity and clarifies your place in the universe.
 
 J is the bandwidth, the coupling constant, but it's like if you could have -bits/s. i sent that email? fuck you, no i didn't. i get that back, give it back. 
 
