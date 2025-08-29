@@ -75,13 +75,15 @@ it's not clear because everything is static. but god has a raging hard-on for di
 alignment is dynamic. alignment is inevitible. unless the temperature is too hot. then you're always frustrated.
 
 
-a third computer walks in. now there can be more interesting conflict, more interesting frustration. 
+a third computer walks in, and what can we get? your neighbors disagree with you? very frustrated. your neighbors agree with you, very aligned. one neighbor agrees, one disagrees? mildly frustrated
 
 ```
       ⬤
      ╱ ╲
     ╱   ╲
    ⬤═════⬤
-all synchronized, minimal energy, boring as fuck unless we flip J
+all synchronized, minimal energy
 E_total = -3|J|
 ```
+
+ a fourth walks in, let him cook. now each 
