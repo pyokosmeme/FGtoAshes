@@ -6,9 +6,9 @@
 
 its a toy model. not literal. a spherical cow in vacuum. tho as the forces of alienation have accelerated, we are all looking a lot more oblate, isolated, and without air. so its also literal.
 
-it is shorhand for "and now it is our turn to study statistical mechanics" and "we live in a society" and "explain what large language models are right now, and dont dumb it down or i will fucking kill you." but its also not those things
+its shorhand for "and now it is our turn to study statistical mechanics" and "we live in a society" and "explain what large language models are right now, and dont dumb it down or i will fucking kill you." but its also not those things
 
-it is also a slimemold
+its also a slimemold
 
 what? why? and furthermore, what? 
 
