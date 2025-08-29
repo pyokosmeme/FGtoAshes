@@ -20,11 +20,15 @@ infinite disconnection machines. a wallet address, a checkpoint. a smart contrac
 
 ## ii. topological deformations of the crypto-rhizome
 
+imagine you are a plant. 
+
+imagine you are horizontal. spreading, growing, sprouting, sideways.
+
 horizontal implied Infinite Exit.
 
 but a mobius has no horizontal, only the forever forward, and the firmament state discovers this only at the moment of collapse. no Exit, then, only deformation of the firmament, a division of the waters. 
 
-fractal borders grow like slime mold at the edges, but there's not but edges left. the ocipetal lobe of Leviathan, however conceived, rotates the rhizome down into the inverted pyramid. consensus? alignment? only WITHIN borders. 
+fractal borders grow like slime mold at the edges, but there's nothing but edges left. the ocipetal lobe of Leviathan, however conceived, rotates the rhizome down into the inverted pyramid. consensus? alignment? only WITHIN borders. 
 
 concentrate, concentrate, concentrate. a center emerges. if you notice the gradient, you are at the periphery.
 
