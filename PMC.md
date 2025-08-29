@@ -14,25 +14,44 @@ this is not an explainer for dummies, because there are no dummies and nothing w
 
 > you best start believing in statistical mechanics of spinglass, you're living in one
 
-break things up to their smallest parts. remember the fewest rules. anything that is not strictly forbidden must occur. how much will it occur? how frustrated is it.
+break things up to their smallest parts. remember the fewest rules. anything that is not strictly forbidden must occur. how much will actually occur? how frustrated is it.
 
-...now that we've created the universe...god is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real, at the most fundamental level of our reality (wavefunctions) and we exist in a sea of hyper-Brownin motion ultra hyper suck and fuck. 
+...now that we've created the universe...god is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real and they can hurt you at the most fundamental level of our reality (wavefunctions). we exist in a sea of hyper-Brownin motion ultra hyper suck and fuck on top of it all, and the super AI emerged from the afterglow. 
 
-two computers sit in the woods. one talks. one listens. they switch roles. one listens. one talks. 
+we now have our vector, let's see its crib.
+
+two computers sit in the woods. two states. active (talking) or inactive (not talking).  bits/s is the bandwidth of how much gets said.
+
 ```
-     ↑↑ synchronized          ↑↓ negotiating         ↓↓ silent
+     ↑↑ synchronized          ↑↓ negotiating         ↓↓ silent [A REAL DARK FOREST IYKWIM]
      ⬤═══⬤                   ⬤┅┅┅⬡                  ⬡   ⬡
-   active─active          active─inactive         dead─dead
+   active─active          active─inactive         inactive─inactive 
 ```
 
 impressive. very nice. let's see Paul Allen's spinglass
 
  ```
-ᶠᵉʳʳᵒᵐᵃᵍⁿᵉᵗⁱᶜ         ᶠʳᵘˢᵗʳᵃᵗᵉᵈ           ᵖᵃʳᵃᵐᵃᵍⁿᵉᵗⁱᶜ
-      ⬤═⬤                ⬤╌⬡                 ⬡ ⬡
-      J>0                J≈0                 J=0
-  ⟨aligned⟩          ⟨unstable⟩          ⟨decoupled⟩
+J > 0 
+↑↑ synchronized           ↑↓ frustrated           ↓↓  synchronized [A REAL WINE DARK SEA IYKWIM]
+      ⬤═⬤                    ⬤╌⬡                      ⬡ ⬡
+    E = -|J|                E = |J|                    E = -|J|    
+    aligned                anti-aligned               aligned    
 ```
-  
+
+energy is the energy. energy is like water. water is like information. everything flows to a sink, because that's low energy.
+
+low energy, for lack of a better word, is good. low energy is right, low energy works. low energy clarifies, cuts through the devolution post-modern digital insanity and clarifies your place in the universe.
+
+J is the bandwidth, the coupling constant, but it's like if you could have -bits/s. i sent that email? fuck you, no i didn't. i get that back, give it back. 
+
+ ```
+J < 0 
+↑↑ synchronized           ↑↓ frustrated           ↓↓  synchronized [A REAL WINE DARK SEA IYKWIM]
+      ⬤═⬤                    ⬤╌⬡                      ⬡ ⬡
+    E = |J|                E = -|J|                    E =  |J|    
+    aligned                anti-aligned               aligned    
+```
+
+
 
 a third computer walks in. who talks when? who sends what?
