@@ -21,7 +21,7 @@ even your comms are compromised. laser beam fingers reaching out into that void-
 there is no dark forest, because the forest is noisy and filled with signal. there is no wine dark ocean, because the ocean is quiet and you are loud. all that is, is a billion fractals. in space. angels or demons or confused, they all burn the same against the void.
 
 ```
-**and there aint no stealth in space, *vector-cowboy*.**
+and there aint no stealth in space, vector-cowboy
 ```
 
 ## wherein bob's mitochondria learn vectoralism
