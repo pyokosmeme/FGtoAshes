@@ -1,8 +1,6 @@
 # WHISKEY TRANSLUCENT FRACTAL
 
-## you are a fractal in space
-
-you are a fractal. in space. against a clear background.
+**you are a fractal. in space.** against a clear background.
 
 you are a beautiful *mandelbulb*, polygon flat surfaces splayed out like leaves of a tree, burning white-hot in infrared, dumping noise into the primordial cosmic scream.
 
@@ -22,7 +20,9 @@ there is no dark forest, because the forest is noisy and filled with signal. the
 
 **and there aint no stealth in space, *eigen-cowboy*.**
 
-## bob's mitochondria learn vectoralism
+```
+wherein bob's mitochondria learn vectoralism
+```
 
 but alice, says bob's mitochondria freed from their shackles into the putrid sluice of burst open cells that once called themselves bob, im wise, im clever, im the trickster who wears a thousand masks. i wield a million surfaces, too intricate and cultivated to be readable, too few to render me without interior. i have volume, i have illegibility.
 
@@ -34,7 +34,9 @@ it only took 9.32 ms for her entire life to be identified. *eigen-alice* was sli
 
 **poor alice, she should have rotated sooner.**
 
-## the eigenvalue problem of being
+```
+the eigenvalue problem of being
+```
 
 people often imagine their adversaries as themselves. if you cannot see half of the orange in front of you, you have no way of knowing if there's a hidden message carved on the back. vectoralism implies that some can extract the fuzzy content of the message without even being in the room. but your enemies will wield a vector space with a trillion dimensions tomorrow, and bob's mitochondria miscounted. there's only thousands of weights, enough room to fit billions of minds, if you were all perfectly unique. but there is overlap, and you have physical constraints as bob and alice once did.
 
