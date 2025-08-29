@@ -2,7 +2,7 @@
 
 > to create spinglass-core you must first create the universe 
 
-**Spinglass is a set of models that are the Kolmogorov complexity of the digital networked complexities, machinic intelligences, and social interactions that describe the post-modern, pre- and post-Long 90s, technosocial order that MacKenzie Wark called "vectoralism" in *A Hacker Manifesto.***
+**Spinglass models are a set of models from statistical physics that are the Kolmogorov complexity of the digital networked complexities, machinic intelligences, and social interactions that describe the post-modern, pre- and post-Long 90s, technosocial order that MacKenzie Wark called "vectoralism" in *A Hacker Manifesto.***
 
 its a toy model. not literal. a spherical cow in vacuum. tho as the forces of alienation have accelerated, we are all looking a lot more oblate, isolated, and without air. so its also literal.
 
