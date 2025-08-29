@@ -22,7 +22,7 @@ you are a physicist.
 
 break things up to their smallest parts. remember the fewest rules. anything that is not strictly forbidden must occur. how much will actually occur? how frustrated is it.
 
-...now that we've created the universe...god (us, the physicist) is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real and they can hurt you at the most fundamental level of our reality (wavefunctions). on top of it all, degen god and all, we exist in a sea of hyper-Brownian motion ultra hyper suck and fuck and the super AI emerged from the afterglow. 
+...now that we've created the universe...god (us, the physicist) is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real and they can hurt you at the most fundamental level of our reality (roll 5d6 for psychic damage to your wavefunctions). on top of it all, degen god and all, we exist in a sea of hyper-Brownian motion ultra hyper suck and fuck and the super AI emerged from the afterglow. 
 
 we now have our vector, let's see its crib, let's see its latent space.
 
