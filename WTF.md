@@ -51,4 +51,6 @@ your messages will not appear as play, and you cannot write them. you're encircl
 
 but even this is temporary. the vectoralists are mapping the rotation groups. they're learning the gauge symmetries. they're extracting the invariants.
 
+```
 see you in the hypersurface, vector-cowboys
+```
