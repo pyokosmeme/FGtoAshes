@@ -23,6 +23,7 @@ we now have our vector, let's see its crib.
 two computers sit in the woods. two states. active (talking) or inactive (not talking).  bits/s is the bandwidth of how much gets said.
 
 ```
+B = bits/s
      ↑↑ synchronized          ↑↓ negotiating         ↓↓ silent [A REAL DARK FOREST IYKWIM]
      ⬤═══⬤                   ⬤┅┅┅⬡                  ⬡   ⬡
    active─active          active─inactive         inactive─inactive 
