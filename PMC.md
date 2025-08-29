@@ -37,6 +37,8 @@ B = bits/s
 
 impressive. very nice. let's see Paul Allen's spinglass
 
+simple. elegant. two states up arrow or down arrow. one interaction, one pair. nice.
+
  ```
 J > 0 
 ↑↑ synchronized           ↑↓ frustrated  [A REAL WINE DARK SEA IYKWIM]      ↓↓  synchronized 
