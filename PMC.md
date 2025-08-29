@@ -49,7 +49,7 @@ E is the energy. E is like water. water is like information. everything flows to
 
 low E, for lack of a better word, is good. low E is right, low E works. low E clarifies, cuts through the devolution post-modern digital insanity and clarifies your place in the universe.
 
-J is the bandwidth, the coupling constant, but it's like if you could have -bits/s. i sent that email? fuck you, no i didn't. i get that back, give it back. 
+J is the bandwidth, the coupling constant, but its like if you could have -bits/s. i sent that email? fuck you, no i didn't. i get that back, give it back. 
 
  ```
 J < 0 
@@ -76,7 +76,7 @@ two computers talk in the woods, but how do they *feel* about it? are they align
 
 what is the exchange of information? is it low energy? high energy? is there friction? does it add value, does it spread the depression from one computer to the next?
 
-it's not clear because everything is static. Paul Allen's spinglass doesn't move, its just a .jpg. but god has a raging hard-on for dice, so he rolls the dice. 
+its not clear because everything is static. Paul Allen's spinglass doesn't move, its just a .jpg. but god has a raging hard-on for dice, so he rolls the dice. 
 
 god jiggles the atoms. he lets the floaty toy bobble in the slosh-slosh of the hot tub. the spins can flip. they can bounce. what once was nice, can become frustrated. but low energy is good. nature flows to low energy. so while styems bounce and jostle and randomly move from state to state, they settle down. they're chasing that low E.
 
