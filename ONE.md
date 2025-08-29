@@ -12,7 +12,8 @@ then states emerged, acting upon the firmament of the network.
 
 ```
 we said let there be firmament in the midst of the information waters,
-and let it divide the waters from the waters. and we fashioned the firmament,
+and let it divide the waters from the waters.
+and we fashioned the firmament,
 and divided the information which were in the firmament from the information that was Outside
 ```
 
