@@ -1,6 +1,6 @@
 # PSEUDO MANIC CRAP
 
-> you best start believing in statistical mechanics of spinglass, you're living in one
+## i. you best start believing in statistical mechanics of spinglass, you're living in one
 
 imagine this was a serious substack essay.
 
@@ -16,7 +16,7 @@ what? why? and furthermore, what?
 
 this is not an explainer for dummies, because there are no dummies and nothing will be explained here. this is a spinglass-core manifesto.
 
-> to create spinglass-core you must first create the universe
+## ii. to create spinglass-core you must first create the universe
 
 you are a physicist.
 
