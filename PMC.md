@@ -52,7 +52,7 @@ J < 0
     E = |J|                E = -|J|                    E =  |J|    
     aligned                anti-aligned               aligned    
 ```
-
+it can also be 0.
 
  ```
 J = 0   [A REAL DARK FOREST IYKWIM]
