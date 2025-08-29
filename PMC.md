@@ -32,10 +32,10 @@ impressive. very nice. let's see Paul Allen's spinglass
 
  ```
 J > 0 
-↑↑ synchronized           ↑↓ frustrated           ↓↓  synchronized [A REAL WINE DARK SEA IYKWIM]
-      ⬤═⬤                    ⬤╌⬡                      ⬡ ⬡
-    E = -|J|                E = |J|                    E = -|J|    
-    aligned                anti-aligned               aligned    
+↑↑ synchronized           ↑↓ frustrated  [A REAL WINE DARK SEA IYKWIM]         ↓↓  synchronized 
+      ⬤═⬤                    ⬤╌⬡                                                  ⬡ ⬡
+    E = -|J|                E = |J|                                                 E = -|J|    
+    aligned                anti-aligned                                              aligned    
 ```
 
 energy is the energy. energy is like water. water is like information. everything flows to a sink, because that's low energy.
