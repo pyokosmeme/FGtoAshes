@@ -1,4 +1,4 @@
-# PSUEDO MANIC CRAP
+# PSEUDO MANIC CRAP
 
 > to create spinglass-core you must first create the universe 
 
