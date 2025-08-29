@@ -74,7 +74,9 @@ two computers talk in the woods, but how do they *feel* about it? are they align
 
 what is the exchange of information? is it low energy? high energy? is there friction? does it add value, does it spread the depression from one computer to the next?
 
-it's not clear because everything is static. but god has a raging hard-on for dice, so he rolls the dice. he jiggles the atoms. he lets the floaty toy bobble in the slosh-slosh of the hot tub. the spins can flip. they can bounce. what once was nice, can become frustrated. but low energy is good. nature flows to low energy. so while styems bounce and jostle and randomly move from state to state, they settle down. 
+it's not clear because everything is static. Paul Allen's spinglass doesn't move, its just a .jpg. but god has a raging hard-on for dice, so he rolls the dice. 
+
+god jiggles the atoms. he lets the floaty toy bobble in the slosh-slosh of the hot tub. the spins can flip. they can bounce. what once was nice, can become frustrated. but low energy is good. nature flows to low energy. so while styems bounce and jostle and randomly move from state to state, they settle down. 
 
 alignment is dynamic. alignment is inevitible. unless the temperature is too hot. then you're always frustrated.
 
