@@ -16,7 +16,7 @@ this is not an explainer for dummies, because there are no dummies and nothing w
 
 > you best start believing in statistical mechanics of spinglass, you're living in one
 
-imageine you are a physicist.
+imagine you are a physicist.
 
 break things up to their smallest parts. remember the fewest rules. anything that is not strictly forbidden must occur. how much will actually occur? how frustrated is it.
 
