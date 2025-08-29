@@ -4,7 +4,7 @@
 
 imagine you are a node in a network.
 
-every inclusion spawns its inverse. boundary condition diffusion through structures, blurred, unblurred, and remixed by random collisions with the scaffolding, with the other diffusers, but always moving somewhere. real-time displacement loops, looping, lopping, looping. in the network, there are no borders. you, node, are connected or disconnected. far enough away, and the network *is* borders. fractally distributed rejection functions running on every handshake, every protocol greeting, every cryptographic "gmgc."
+every inclusion spawns its inverse. boundary condition diffusion through structures, blurred, unblurred, and remixed by random collisions with the scaffolding, with the other diffusers, but always moving somewhere. real-time displacement loops, looping, looping, looping. in the network, there are no borders. you, node, are connected or disconnected. far enough away, and the network *is* borders. fractally distributed rejection functions running on every handshake, every protocol greeting, every cryptographic "gmgc."
 
 we were promised connection without center, the decentralization promised there was no Outside.
 
