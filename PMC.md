@@ -62,5 +62,26 @@ J = 0   [A REAL DARK FOREST IYKWIM]
     aligned                anti-aligned                                 aligned    
 ```
 
+you have two states. up or down. you have a coupling constant. it can be any positive or negative number. Zeros and Ones. neodigitaltechnoculture.
 
-a third computer walks in. who talks when? who sends what?
+ok, ahem, but its like talking. 
+
+two computers talk in the woods, but how do they *feel* about it? are they aligned (↑↑)? are they frustrated (↑↓)? are they synched but hate the world (↓↓)? 
+
+what is the exchange of information? is it low energy? high energy? is there friction? does it add value, does it spread the depression from one computer to the next?
+
+it's not clear because everything is static. but god has a raging hard-on for dice, so he rolls the dice. he jiggles the atoms. he lets the floaty toy bobble in the slosh-slosh of the hot tub. the spins can flip. they can bounce. what once was nice, can become frustrated. but low energy is good. nature flows to low energy. so while styems bounce and jostle and randomly move from state to state, they settle down. 
+
+alignment is dynamic. alignment is inevitible. unless the temperature is too hot. then you're always frustrated.
+
+
+a third computer walks in. who talks when? who sends what? well, l
+
+```
+      ⬤
+     ╱ ╲
+    ╱   ╲
+   ⬤═════⬤
+all synchronized, minimal energy, boring as fuck
+E_total = -3|J|
+```
