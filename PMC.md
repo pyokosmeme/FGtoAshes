@@ -1,6 +1,8 @@
 # PSEUDO MANIC CRAP
 
-> to create spinglass-core you must first create the universe 
+> to create spinglass-core you must first create the universe
+
+imagine this was a serious article.
 
 **Spinglass models are a set of models from statistical physics that are the Kolmogorov complexity of the digital networked complexities, machinic intelligences, and social interactions that describe the post-modern, pre- and post-Long 90s, technosocial order that MacKenzie Wark called "vectoralism" in *A Hacker Manifesto.***
 
@@ -16,7 +18,7 @@ this is not an explainer for dummies, because there are no dummies and nothing w
 
 > you best start believing in statistical mechanics of spinglass, you're living in one
 
-imagine you are a physicist.
+you are a physicist.
 
 break things up to their smallest parts. remember the fewest rules. anything that is not strictly forbidden must occur. how much will actually occur? how frustrated is it.
 
