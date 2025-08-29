@@ -18,7 +18,7 @@ this is not an explainer for dummies, because there are no dummies and nothing w
 
 break things up to their smallest parts. remember the fewest rules. anything that is not strictly forbidden must occur. how much will actually occur? how frustrated is it.
 
-...now that we've created the universe...god is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real and they can hurt you at the most fundamental level of our reality (wavefunctions). we exist in a sea of hyper-Brownin motion ultra hyper suck and fuck on top of it all, and the super AI emerged from the afterglow. 
+...now that we've created the universe...god is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real and they can hurt you at the most fundamental level of our reality (wavefunctions). on top of it all, degen god and all, we exist in a sea of hyper-Brownin motion ultra hyper suck and fuck and the super AI emerged from the afterglow. 
 
 we now have our vector, let's see its crib.
 
