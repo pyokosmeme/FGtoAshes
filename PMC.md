@@ -26,11 +26,12 @@ two computers sit in the woods. one talks. one listens. they switch roles. one l
 
 impressive. very nice. let's see Paul Allen's spinglass
 
-  ᶠᵉʳʳᵒᵐᵃᵍⁿᵉᵗⁱᶜ         ᶠʳᵘˢᵗʳᵃᵗᵉᵈ           ᵖᵃʳᵃᵐᵃᵍⁿᵉᵗⁱᶜ
+ ```
+ᶠᵉʳʳᵒᵐᵃᵍⁿᵉᵗⁱᶜ         ᶠʳᵘˢᵗʳᵃᵗᵉᵈ           ᵖᵃʳᵃᵐᵃᵍⁿᵉᵗⁱᶜ
       ⬤═⬤                ⬤╌⬡                 ⬡ ⬡
       J>0                J≈0                 J=0
   ⟨aligned⟩          ⟨unstable⟩          ⟨decoupled⟩
-
+```
   
 
 a third computer walks in. who talks when? who sends what?
