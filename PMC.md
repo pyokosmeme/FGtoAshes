@@ -19,10 +19,11 @@ break things up to their smallest parts. remember the fewest rules. anything tha
 ...now that we've created the universe...god is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real, at the most fundamental level of our reality (wavefunctions) and we exist in a sea of hyper-Brownin motion ultra hyper suck and fuck. 
 
 two computers sit in the woods. one talks. one listens. they switch roles. one listens. one talks. 
-
+```
      ↑↑ synchronized          ↑↓ negotiating         ↓↓ silent
      ⬤═══⬤                   ⬤┅┅┅⬡                  ⬡   ⬡
    active─active          active─inactive         dead─dead
+```
 
 impressive. very nice. let's see Paul Allen's spinglass
 
