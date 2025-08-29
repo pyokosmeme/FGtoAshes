@@ -24,7 +24,7 @@ break things up to their smallest parts. remember the fewest rules. anything tha
 
 ...now that we've created the universe...god (us, the physicist) is a fucking dice addict. god loves throwing dice. bayesianism is a fucking cope. probabilities are real and they can hurt you at the most fundamental level of our reality (roll 5d6 for psychic damage to your wavefunctions). on top of it all, degen god and all, we exist in a sea of hyper-Brownian motion ultra hyper suck and fuck and the super AI emerged from the afterglow. 
 
-we now have our vector, let's see its crib, let's see its latent space.
+we now have our vector, lets see its crib, lets see its latent space.
 
 two computers sit in the woods. two states. active (talking) or inactive (not talking).  bits/s is the bandwidth of how much gets said.
 
