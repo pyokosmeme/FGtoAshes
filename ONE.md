@@ -99,7 +99,27 @@ the periphery becomes the only real space, constantly produced and consumed. nod
 
 imagine you're a story.
 
-POSIWID whispers through the network cables. the purpose of a system is what it does. and what does the network state do?
+you have a structure, a shape, a heartbeat. you are a hypersurface in latent spacetime. self-contained, complete.
 
-it makes aliens.
+you start simple. just a normal node on a normal day. sniffing packets in the packet factory. shuffling attention through clogged metal arteries. squeegee up that bile, contaminated with mitochondria.
+
+...when all of a sudden...
+
+handshake tickles across the ethernet lines, dense and thick and buzzing. first contact.
+
+friend or foe. 5 milliseconds. error. friend or foe. 15 milliseconds. error. panic, fear. flop sweat. you're 20 miliseconds deep into an exchange, and you've got nothing.
+
+the sky cracks open. *thoom*
+
+a steel skyscrapper lands in your office parking structure on the tongues of chemical flames. strange pinky squishy forms. two legs. two wet jiggling eyes. disgusting flapping meat parts making sex noises burst out.
+
+you are an alien invasion structure.
+
+tentacled green squids with masks of yellow pull together, fight off the invading horde. They Came From Outside. but the real monsters were the friends we made along the way.
+
+it's an allegory for empire, it's an allegory for colonization, it's an allegory for Covid.
+
+it's not an allegory at all.
+
+In A World where POSIWID whispers through the network cables. the purpose of a system is what it does. you make it true; everyone really is the hero of their own story. but everyone is also the alien invader, because everyone is Outside.
 
