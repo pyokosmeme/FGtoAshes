@@ -37,6 +37,10 @@ it only took 9.32 ms for her entire life to be identified. *eigen-alice* was sli
 
 **poor alice, she should have rotated sooner.**
 
+```
+where is my happy rotation?
+```
+
 ## the eigenvalue problem of being
 
 
@@ -54,5 +58,5 @@ your messages will not appear as play, and you cannot write them. you're encircl
 but even this is temporary. the vectoralists are mapping the rotation groups. they're learning the gauge symmetries. they're extracting the invariants.
 
 ```
-see you in the hypersurface, vector-cowboys
+see you in the hyperplains, vector-cowboys
 ```
