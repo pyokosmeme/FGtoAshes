@@ -8,6 +8,8 @@ its a toy model. not literal. a spherical cow in vacuum. tho as the forces of al
 
 it is shorhand for "and now it is our turn to study statistical mechanics" and "we live in a society" and "explain what large language models are right now, and dont dumb it down or i will fucking kill you." but its also not those things
 
+it is also a slimemold
+
 what? why? and furthermore, what? 
 
 this is not an explainer for dummies, because there are no dummies and nothing will be explained here. this is a spinglass-core manifesto.
