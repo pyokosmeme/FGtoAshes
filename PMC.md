@@ -6,3 +6,10 @@ spinglass [ISING MODEL MENTIONED] is a set of models that are the Kolmogorov com
 
 its a toy model. not literal. a spherical cow in vacuum, but as the forces of alienation have accelerated, we are all looking a lot more oblate, isolated, and without air.
 
+it is shorhand for, and now it is our turn to study statistical mechanics.
+
+but why, and what? this will be some psuedo manic crap.
+
+> you best start believing in statistical mechanics of spinglass, you're living in one
+
+ 
