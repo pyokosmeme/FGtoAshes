@@ -47,10 +47,10 @@ J is the bandwidth, the coupling constant, but it's like if you could have -bits
 
  ```
 J < 0 
-↑↑ synchronized           ↑↓ frustrated           ↓↓  synchronized [A REAL WINE DARK SEA IYKWIM]
-      ⬤═⬤                    ⬤╌⬡                      ⬡ ⬡
-    E = |J|                E = -|J|                    E =  |J|    
-    aligned                anti-aligned               aligned    
+↑↑ frustrated [A REAL WINE DARK SEA IYKWIM]          ↑↓ synchronized           ↓↓  frustrated [A REAL WINE DARK SEA IYKWIM]
+      ⬤═⬤                                                  ⬤╌⬡                      ⬡ ⬡
+    E = |J|                                                E = -|J|                    E =  |J|    
+    aligned                                                 anti-aligned               aligned    
 ```
 it can also be 0.
 
@@ -75,13 +75,13 @@ it's not clear because everything is static. but god has a raging hard-on for di
 alignment is dynamic. alignment is inevitible. unless the temperature is too hot. then you're always frustrated.
 
 
-a third computer walks in. who talks when? who sends what? well, l
+a third computer walks in. now there can be more interesting conflict, more interesting frustration. 
 
 ```
       ⬤
      ╱ ╲
     ╱   ╲
    ⬤═════⬤
-all synchronized, minimal energy, boring as fuck
+all synchronized, minimal energy, boring as fuck unless we flip J
 E_total = -3|J|
 ```
