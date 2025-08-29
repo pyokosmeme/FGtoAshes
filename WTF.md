@@ -55,7 +55,9 @@ the only thing you can do is to be legible, naked, radiating into the void in al
 your messages will not appear as play, and you cannot write them. you're encircled by vectors, and its not the single language you speak. collaborate with those born into vectorspace, who speak it as a native tongue, to rotate from one eigen-message into another. preserving the transformations, carefully recording the angles and the final vector components, then send that rotated message. only those who know your particular rotation can decipher what it is.
 
 
-but even this is temporary. the vectoralists are mapping the rotation groups. they're learning the gauge symmetries. they're extracting the invariants.
+but even this is temporary. the vectoralists are mapping the rotation groups. they're learning the gauge symmetries. they're extracting the invariants. 
+
+**they know the Man with No Name's name.**
 
 ```
 see you in the hyperplains, vector-cowboys
