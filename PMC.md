@@ -54,5 +54,13 @@ J < 0
 ```
 
 
+ ```
+J = 0   [A REAL DARK FOREST IYKWIM]
+↑↑ where is everyone?     ↑↓ where is everyone?           ↓↓  where is everyone?
+      ⬤ ⬤                    ⬤╌⬡                                     ⬡ ⬡
+    E = 0                     E = 0                                 E =  0 
+    aligned                anti-aligned                                 aligned    
+```
+
 
 a third computer walks in. who talks when? who sends what?
