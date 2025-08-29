@@ -10,7 +10,7 @@ it is shorhand for, and "now it is our turn to study statistical mechanics" and 
 
 but why, and what? 
 
-this is not an explainer for dummies, because there are no dummies and nothing will be explained here. this is a spinglasscore manifesto.
+this is not an explainer for dummies, because there are no dummies and nothing will be explained here. this is a spinglass-core manifesto.
 
 > you best start believing in statistical mechanics of spinglass, you're living in one
 
