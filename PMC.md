@@ -37,7 +37,7 @@ B = bits/s
 
 impressive. very nice. let's see Paul Allen's spinglass
 
-simple. elegant. two states up arrow or down arrow. one interaction, one pair. nice.
+simple. elegant. two states: up arrow or down arrow. one interaction, one pair. nice. they can represent anything, and have more states, but Paul Allen loves to mog people with his spinglass, so KISS
 
  ```
 J > 0 
