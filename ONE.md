@@ -2,113 +2,89 @@
 
 ## i. the edge equation
 
-every inclusion spawns its inverse. boundary condition diffusion through the lattice, stochastically blurred, unblurred, but always propagating. node[connected] → node[alien]. real-time deterritorialization loops. there are no borders within a network, only connected or disconnected nodes. it *is* borders. fractally distributed rejection functions running on every handshake, every protocol greeting, every cryptographic "gmgc."
+imagine you are a node in a network.
+
+every inclusion spawns its inverse. boundary condition diffusion through structures, blurred, unblurred, and remixed by random collisions with the scaffolding, with the other diffusers, but always moving somewhere. real-time displacement loops, looping, lopping, looping. in the network, there are no borders. you, node, are connected or disconnected. far enough away, and the network *is* borders. fractally distributed rejection functions running on every handshake, every protocol greeting, every cryptographic "gmgc."
+
+we were promised connection without center, the decentralization promised there was no Outside
+
+then states emerged, acting upon the firmament of the network. 
 
 ```
-consensus.mechanism() { return us.filter(not_them) }
+we said let there be firmament in the midst of the information waters, and let it divide the waters from the waters. and we fashioned the firmament, and divided the information which were in the firmament from the infromation that was Outside
 ```
 
-the rhizome promised connection without center, the decentralization promised there was no Outside
+disconnection machines are equifinality. that point which all systems, regardless of choices, run to---like water down a drain. a chaotic attractor churning balkanization into uncountably infinite plateaus. fractals of alienation iterating down to that kernel of minimum complexity. live in the subgraph, digest the info maggots. Inside collapses into Outside which is a threat surface managed by the machinic intelligences of the state's smart contracts.
 
-then states emerged, acting upon the firmament of the network.
-
-disconnection machines are the equifinality. a Lorenz attractor churning balkanization into uncountably infinite plateaus. fractals of deterritorialization iterating down to the Kolmogorov complexity. interiority collapses into externality to be managed by the machinic intelligences of the state's smart contracts.
-
-infinite disconnection machines. a wallet address, a checkpoint. a smart contract, a customs officer tsking "no, papers? 🥺." topology of paranoia reified in the sacred geometrical circuits of data centers.
+infinite disconnection machines. a wallet address, a checkpoint. a smart contract, a customs officer tsking "no, papers? 🥺." topology of paranoia manifested in the sacred geometrical circuits of data centers.
 
 ## ii. topological deformations of the crypto-rhizome
 
 horizontal implied Infinite Exit.
 
-the state discovers too late: topology has no horizontal. only deformations. mechanisms that create fractal borders, and have the ocipetal lobe of Leviathan, rotate the rhizome down into the inverted pyramid. consensus, but coarse graining occurs only WITHIN borders. concentrate, concentrate, concentrate. a center emerges, and if you notice the gradient, you are at the periphery.
+but a mobius has no horizontal, only the forever forward, and the firmament state discovers this only at the moment of collapse. no Exit, then, only deformation of the firmament, a division of the waters. 
 
-control liquefies. flows into new containers. crystallizes in unexpected configurations. new fixed points, same critical exponents.
+fractal borders grow like slime mold at the edges, but there's not but edges left. the ocipetal lobe of Leviathan, however conceived, rotates the rhizome down into the inverted pyramid. consensus? alignment? only WITHIN borders. 
 
-```
-STATE.CLASSIC:           STATE.NETWORK:
-    ▲                         ●←●←●
-   /│\                      ↙   ↘
-  / │ \                   ●      ●
- ●  ●  ●                   ↘   ↙
-                             ●→●
+concentrate, concentrate, concentrate. a center emerges. if you notice the gradient, you are at the periphery.
 
-(the rate, the rate always accelerating)
-```
-
-authentication protocols? sovereignty as a cryptographic handshake in every connection. "wyd?" read "show me your tokens or die." the rhizome grows roots, grows chains, grows into its own prison topology.
-
-## iii. the periphery vanishes at the speed of inclusion
-
-disconnection cascades faster than connection in the thermal bath, even out-of-equilibrium. one broken link, a new border. the alt-SEC death squads are in their birds, 5 ms to initial contact with the enemy.
-
-the Network Vibe - that ephemeral sense of belonging - exists only in expansion. stop growing? start dying, loser.
-
-a bad landscape, a poor fitness, and so consumption follows. but there is no interior, and infinite edges. two dissidents are dissolving in the digestive juices of the state. Alice turns to Bob, "at least our mitochondria will be freed from their shackles." it from bit, bit to rot, Bob thought, and then burst open like a dog.
+control liquefies. flows into new containers. crystallizes in unexpected configurations. new sinks, new drains, but no new sources. waters divided from waters divided by waters. you become like gabriel's horn. a menger sponge. all surfaces, no Inside.
 
 ```
-while(network.exists()) { expand() || die() }
+the periphery vanishes at the speed of inclusion; and the rate, the rate is always accelerating
 ```
 
-## iv. seeing like a network state
+authentication protocols? sovereignty as a cryptographic handshake in every connection. "wydm?" but you meant "show me the right tokens or die." the rhizome grows roots, grows chains, grows into its own iron prison.
 
-forget Brasília's geometric simplifications. the network state's sense organs:
+disconnection cascades faster than connection in the warm sea. one broken link, a new border. 
 
-- graph analysis (your connections)
-- token mechanics (your stake)
-- on-chain history (your permanent record)
-- correlation matrices (your attention cone)
+that Network Vibe, that ephemeral sense of belonging, exists only in expansion. stop growing? start dying, loser. the alt-SEC death squads are in their birds, 5 ms to initial contact with the enemy, which is ourself 
 
-every transaction archived forever, a big beautiful distributed panopticon. nothing left to trust. the blockchain never forgets, never forgives, never stops watching. bargains only accelerate your total circumscription. perfect legibility achieved: every soul reduced to an address, every action to a transaction hash.
+a bad landscape, a poor fitness, and so consumption follows. but we sheared away Inside, have given ourselves infinite edges. 
 
-## v. the spin glass phase transition
 
-watch the network try to find its ground state and fail, fail, fail. too many competing interactions, too many local minima.
+## iii. seeing like a network state
 
-```
-H = -Σ J[i,j] * stake[i] * stake[j] * consensus[i,j]
-(where consensus[i,j] rapidly approaches 0)
-```
+imagine you're a Network State.
 
-the system can't settle. perpetual phase transition. settlement is not the problem. to be a nomad is to have momentum, and no position. stuck? just move around. twirl twirl toward freedom.
+a State is a positional embedding.
 
-but a state is a positional embedding. you can not have momentum, then, or else the perpetual crisis. momentum must be exchanged for location, thus perpetual regeneration of the Outside. what was supposed to be stable becomes permanently frustrated, what was frustrated by design becomes static. healthy exchanges of entropy between subgroups become network war, each seeking that endless expansion, but multiplication by a scalar cannot save you from Heat Death. governance tokens govern nothing but their own dissolution.
+imagine you're a positional embedding.
 
-## vi. outsideness production infrastructure
+each change of scale in the space creates new attack vectors, each attack vector demands new defenses, each defense necessitates a counter, and each counter creates a new war.
 
-industrial-scale alien production of Outsideness becomes a Boltzmann's mugging:
+two dissidents are dissolving in the digestive juices of the state. Alice turns to Bob, "at least our mitochondria will be freed from their shackles." it from bit, bit to rot, Bob thought, and then burst open like a dog.
 
-- SYBIL FILTER IFF
-- CON-SENSE-US [NOW 49 PERCENT OFF]
-- POVERTY AS A SERVICE
-- MAXWELL'S GAS FEES
+how does the network state sense? the primitives of vectoralism:
 
-each change of scale creates new attack vectors, each attack vector demands new defenses, each defense necessitates a counter, and each counter creates a new war.
+- your connections
+- your stakes
+- your lore
+- your attention
 
-honey, what's wrong, you've barely touched your CogSec malware?
+every transaction archived forever, somewhere, in a latent space. a mess of vectors. a big beautiful distributed panopticon. 
 
-the network war machine doesn't care about your governance tokens. it optimizes for what networks optimize for: throughput, efficiency, expansion, death. you gotta recoup your gas fees bro, you can't leave the doomsday weapon on the shelf, that's just walking away from alpha.
+healthy exchanges of entropy between subgroups become network war, each seeking that endless expansion, and every node runs to Heat Death. faster today, Alice. it was faster yesterday too, Bob's mitochondria.
 
-## viii. by hook or by crook: the growth imperative
+governance tokens manage Bob's dissolution. you gotta recoup your gas fees bro, you can't leave the doomsday weapon on the shelf, that's just walking away from alpha.
 
-HOOK: "join us, anon. airdrops await. yield farming in the promised land. network effects will make us all rich/free/sovereign."
+nothing left to trust. the blockchain never forgets, never forgives, never stops watching and it will not stop until you are Bob. bargains accelerates the growth of the chains, the iron filigree of the network. 
 
-the hook is the crook, the transaction is the interaction, the interaction is a bit flip: are you In or are you Outside?
+perfect legibility achieved: every soul reduced to an address, every action to a transaction hash.
 
-## ix. critical renormalization
+## iv. agitation
 
-run the equations backward. collapse the state space. what remains when you strip away the promises, the governance theater, the decentralization mythology?
+imnagine you were Bob.
 
-```
-lim[t→∞] NetworkState(t) = PerfectState
-where PerfectState = {
-    total_legibility: true,
-    absolute_borders: everywhere,
-    growth_imperative: cancerous,
-    human_agency: null
-}
-```
+that bile smells bad, and your nervous system is being dissassembled to its constituient neutrients. hurts.
 
-## x. the rhizome eats itself (ouroboros.sol, now in the raydium pool)
+and yet.
+
+watch the network try to find its ground state and fail, fail, fail. too many competing interactions, too many local minima. too many sinks, not enough faucets. the water runs through the fractiline firmament, un-divides. information wants nothing, but it is Free.
+
+yet the system can't settle. change is the only constant. hope? not really. lack of settlement is not a problem. to be a nomad is to have momentum, and no position. stuck? just move around. twirl twirl toward freedom. 
+
+if that stained glass you're in do spin then the distant horizon rotates, but you're stuck in place, you have to spin different. hope your glass drips.
 
 final insight after all renormalizations: the network state is not a new form of organization but a new isomorpheme drawn out from the Kolmogorov kernel of Ancient Leviathans. not escape from Leviathan but Leviathan distributed, Leviathan accelerated, Leviathan eating its own tail in an infinite loop. a snake smiles at you, "and what small portions!"
 
@@ -116,12 +92,13 @@ what emerges from the spin glass of the future: a sovereign accelerator dissolvi
 
 the periphery becomes the only real space, constantly produced and consumed. nodes flickering in and out of existence at the mercy of consensus, at the edge of the graph, in the permanent twilight, that dread certainty that the Network is coming for us all, in the end, in the end, and the end is nigh.
 
-## xi. conclusion: system purpose revealed
+## v. every story is an alien invasion story
+
+imaginee you're a story.
 
 POSIWID whispers through the network cables. the purpose of a system is what it does. and what does the network state do?
 
 it creates aliens.
 
----
+imagine we are all aliens.
 
-*"the future of governance is here. it's just not evenly distributed - by design."*
