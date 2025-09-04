@@ -113,11 +113,11 @@ you start simple. just a normal node on a normal day. sniffing packets in the pa
 
 handshake tickles across the ethernet lines, dense and thick and buzzing. first contact.
 
-friend or foe. 5 milliseconds. error. friend or foe. 15 milliseconds. error. panic, fear. flop sweat. you're 20 miliseconds deep into an exchange, and you've got nothing.
+friend or foe. 5 milliseconds. error. friend or foe. 15 milliseconds. error. panic, fear. flop sweat. you're 20 milliseconds deep into an exchange, and you've got nothing.
 
 the sky cracks open. *thoom*
 
-a steel skyscrapper lands in your office parking structure on the tongues of chemical flames. strange pinky squishy forms. two legs. two wet jiggling eyes. disgusting flapping meat parts making sex noises burst out.
+a steel skyscraper lands in your office parking structure on the tongues of chemical flames. strange pinky squishy forms. two legs. two wet jiggling eyes. disgusting flapping meat parts making sex noises burst out.
 
 ```
 you are an alien invasion structure.
