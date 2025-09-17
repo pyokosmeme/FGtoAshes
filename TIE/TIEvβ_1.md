@@ -28,15 +28,15 @@ at its heart, the Ising model is deceptively simple. imagine a grid of "spins." 
 
 ### ising at a glance (minimal math box)
 
-**order parameter:** \$ m = \\tfrac{1}{N} \\sum_i s_i \\)
+**order parameter:** \\( m = \\tfrac{1}{N} \\sum_i s_i \\)
 
-**temperature \$T_{\\text{train}}\\):** training thermodynamic temperature set by LR \$\\eta\\) (not sampling \$\\tau\\)); high \$T_{\\text{train}}\\) ⇒ more exploration; low \$T_{\\text{train}}\\) ⇒ freezing into ordered states.
+**temperature \\(T_{\\text{train}}\\):** training thermodynamic temperature set by LR \\(\\eta\\) (not sampling \\(\\tau\\)); high \\(T_{\\text{train}}\\) ⇒ more exploration; low \\(T_{\\text{train}}\\) ⇒ freezing into ordered states.
 
-**susceptibility:** \$ \\chi = \\partial m / \\partial h \\) peaks near \$T_c\\) (tiny fields → large responses; “viral” cascades)
+**susceptibility:** \\( \\chi = \\partial m / \\partial h \\) peaks near \\(T_c\\) (tiny fields → large responses; “viral” cascades)
 
-**spin glass cue:** frustration from mixed \$J_{ij} > 0\\) and \$J_{ij} < 0\\) creates a rugged landscape and many metastable states
+**spin glass cue:** frustration from mixed \\(J_{ij} > 0\\) and \\(J_{ij} < 0\\) creates a rugged landscape and many metastable states
 
-**Edwards–Anderson order parameter:** \$ q = \\tfrac{1}{N} \\sum_i \\langle s_i \\rangle^2 \\) captures “frozen” disagreement in disordered phases
+**Edwards–Anderson order parameter:** \\( q = \\tfrac{1}{N} \\sum_i \\langle s_i \\rangle^2 \\) captures “frozen” disagreement in disordered phases
 
 *   **Opinions:** for or against a certain idea.
 *   **Neurons:** firing or not firing.
@@ -52,15 +52,15 @@ the total "energy" of the system is a measure of how misaligned the spins are. t
 
 now, here's the magic ingredient: **temperature**.
 
-**Terminology.** Here “temperature” means the training thermodynamic temperature \$T_{\\text{train}}\\) that appears in \$p(\\theta) \\propto e^{-L(\\theta)/T_{\\text{train}}}\\), with \$T_{\\text{train}}\\) set by LR \$\\eta\\) (scale from gradient-noise statistics). This is not the sampling temperature \$\\tau\\) used at inference. A fuller “two temperatures” note appears in §iv.
+**Terminology.** Here “temperature” means the training thermodynamic temperature \\(T_{\\text{train}}\\) that appears in \\(p(\\theta) \\propto e^{-L(\\theta)/T_{\\text{train}}}\\), with \\(T_{\\text{train}}\\) set by LR \\(\\eta\\) (scale from gradient-noise statistics). This is not the sampling temperature \\(\\tau\\) used at inference. A fuller “two temperatures” note appears in §iv.
 
 in the Ising model, temperature is a measure of random noise, of thermal agitation. to understand why this matters, let's take a block of iron. each iron atom is a tiny magnet, a spin.
 
 *   at **high temperatures**, the atoms are vibrating violently. this thermal energy is so strong that it overwhelms the weak magnetic forces between neighbors. each spin flips randomly, pointing in any which way. the system is a **disordered (paramagnetic)** phase, and the block of iron as a whole has no magnetic field.
 *   as you **cool it down**, the vibrations lessen. the local magnetic interactions start to matter more. neighboring spins begin to align, forming small patches of agreement called **magnetic domains**.
-*   at a specific, **critical temperature** \$T_c\\) (Curie temperature), something incredible happens. these domains suddenly merge and lock into place. a global consensus snaps into existence. the system enters an **ordered (ferromagnetic)** phase, and the block of iron becomes a permanent magnet. this is a **phase transition**.
+*   at a specific, **critical temperature** \\(T_c\\) (Curie temperature), something incredible happens. these domains suddenly merge and lock into place. a global consensus snaps into existence. the system enters an **ordered (ferromagnetic)** phase, and the block of iron becomes a permanent magnet. this is a **phase transition**.
 
-this analogy extends to social and computational systems. We’ll use \$T_{\\text{social}}\\) as a metaphor for ‘randomizing influence’ in societies (news shocks, noise, etc.). \$T_{\\text{social}}\\) is not the same object as the training temperature \$T_{\\text{train}}\\) in SGD; the shared term is analogical.
+this analogy extends to social and computational systems. We’ll use \\(T_{\\text{social}}\\) as a metaphor for ‘randomizing influence’ in societies (news shocks, noise, etc.). \\(T_{\\text{social}}\\) is not the same object as the training temperature \\(T_{\\text{train}}\\) in SGD; the shared term is analogical.
 
 we can also have systems with random, conflicting interactions. these are called **spin glasses**. in a spin glass, you have a mix of ferromagnetic and antiferromagnetic couplings. it's impossible to satisfy all the interactions at once. the system gets "stuck" in a multitude of metastable states, a rugged energy landscape with many valleys. this is a much better model for complex social systems, with their tangled webs of alliances and rivalries, and for the loss landscapes of LLMs.
 
@@ -80,7 +80,7 @@ this is not just a metaphor. studies have used Ising-like models to precisely re
 
 ## iv. grokking the great beast: llms as ising engines
 
-**Convention:** In §iv and the Appendix, “temperature” = \$T_{\\text{train}}\\) unless we explicitly write “sampling temperature \$\\tau\\).”
+**Convention:** In §iv and the Appendix, “temperature” = \\(T_{\\text{train}}\\) unless we explicitly write “sampling temperature \\(\\tau\\).”
 
 and now, we turn to the silicon gods, the large language models. how can the Ising model help us understand these strange, alien intelligences?
 
@@ -90,14 +90,14 @@ this energy landscape is an incomprehensibly vast, high-dimensional spin glass w
 
 > **Two temperatures (don’t mix them).**
 >
-> *   \$T_{\\text{train}}\\) — **Training thermodynamic temperature.** Governs the SGD-induced ensemble over weights; appears in \$p(\\theta) \\propto e^{-L(\\theta)/T_{\\text{train}}}\\). Controlled primarily by LR \$\\eta\\); scale set by gradient-noise covariance / curvature.
-> *   \$\\tau\\) — **Sampling (softmax) temperature.** Inference-only logit rescale; changes output diversity, not the learned weights or the training energy landscape.
+> *   \\(T_{\\text{train}}\\) — **Training thermodynamic temperature.** Governs the SGD-induced ensemble over weights; appears in \\(p(\\theta) \\propto e^{-L(\\theta)/T_{\\text{train}}}\\). Controlled primarily by LR \\(\\eta\\); scale set by gradient-noise covariance / curvature.
+> *   \\(\\tau\\) — **Sampling (softmax) temperature.** Inference-only logit rescale; changes output diversity, not the learned weights or the training energy landscape.
 
 *   the **learning rate** in training is analogous to **temperature**.
-    $
+    \(
     T_{\\text{train}} \\propto \\eta \\quad (\\text{scale set by gradient-noise covariance / curvature}).
-    $
-*   Warmup–decay **anneals \$T_{\\text{train}}\\)**: high \$\\eta\\) sets a high \$T_{\\text{train}}\\) for exploration; decays lower \$T_{\\text{train}}\\) to settle into wide, low-loss basins.
+    \(
+*   Warmup–decay **anneals \\(T_{\\text{train}}\\)**: high \\(\\eta\\) sets a high \\(T_{\\text{train}}\\) for exploration; decays lower \\(T_{\\text{train}}\\) to settle into wide, low-loss basins.
 *   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics). This holds locally under a quadratic approximation; outside that regime the analogy guides hypotheses rather than dictates equalities.
 *   the **equipartition theorem** from thermodynamics, which states that energy is distributed equally among all degrees of freedom in thermal equilibrium, has an analogue in LLMs: the "thermal loss" is independent of the "sharpness" of the valley. this helps explain why models can generalize across tasks with very different structures.
 
@@ -146,28 +146,28 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 
 **3. The Partition Function and Free Energy:**
 
-*   the **partition function**, \$ Z \\), is an integral over all possible weight configurations:
-  $
+*   the **partition function**, \\( Z \\), is an integral over all possible weight configurations:
+  \(
   Z \;= \; \int d\\theta \\, \\exp\\!\\big( -L(\\theta) / T_{\\text{train}} \\big).
-  $
-*   the **free energy**, \$ F \\), is given by
-  $
+  \(
+*   the **free energy**, \\( F \\), is given by
+  \(
   F \;= \; - \\, T_{\\text{train}} \\, \\log Z .
-  $
+  \(
 
 **4. Temperature:**
 
-*   as established in the main text, **temperature**, \$T_{\\text{train}}\\), in this context is the **learning rate \$\\eta\\)** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
+*   as established in the main text, **temperature**, \\(T_{\\text{train}}\\), in this context is the **learning rate \\(\\eta\\)** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
 
-**(added nuance):** under quadratic ‘valley’ assumptions and steady-state SGD, the training temperature satisfies \$T_{\\text{train}} \\propto \\eta\\), with batch-induced gradient noise setting the proportionality scale.
+**(added nuance):** under quadratic ‘valley’ assumptions and steady-state SGD, the training temperature satisfies \\(T_{\\text{train}} \\propto \\eta\\), with batch-induced gradient noise setting the proportionality scale.
 
 **5. Entropy:**
 
-*   the **entropy** of the system, \$S\\), has two important meanings. First, it is the Shannon entropy of the model's output distribution. Second, and more subtly, it is the "configurational entropy" related to the geometry of the loss landscape. a wide, flat valley in the loss landscape has higher entropy than a sharp, narrow one, because there are more weight configurations \$\\theta\\) that yield similarly low loss. the `Neural Thermodynamic Laws` paper shows that there is an **entropic force** that pushes the model towards these flatter, higher-entropy regions, a phenomenon known as a bias towards "simplicity" or "compressibility."
+*   the **entropy** of the system, \\(S\\), has two important meanings. First, it is the Shannon entropy of the model's output distribution. Second, and more subtly, it is the "configurational entropy" related to the geometry of the loss landscape. a wide, flat valley in the loss landscape has higher entropy than a sharp, narrow one, because there are more weight configurations \\(\\theta\\) that yield similarly low loss. the `Neural Thermodynamic Laws` paper shows that there is an **entropic force** that pushes the model towards these flatter, higher-entropy regions, a phenomenon known as a bias towards "simplicity" or "compressibility."
 
 **6. The Laws of Thermodynamics:**
 
-*   **First Law (Conservation of Energy):** the change in the model's loss (\$\\Delta L\\)) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). \$\\Delta L = W + Q\\).
+*   **First Law (Conservation of Energy):** the change in the model's loss (\\(\\Delta L\\)) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). \\(\\Delta L = W + Q\\).
 *   **Second Law (Entropy Increases):** an isolated system tends towards maximum entropy. in LLM training, this manifests as the entropic force pushing the model towards wider, more generalizable minima. it explains why models often find solutions that are simpler than they strictly need to be to fit the training data.
 *   **Third Law (Entropy at Absolute Zero):** as the temperature (learning rate) approaches zero, the system freezes into a single ground state. SGD becomes pure gradient descent, and the model loses its ability to explore.
 
@@ -175,7 +175,7 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 
 *   **emergent abilities** and **grokking** are **phase transitions**. as a control parameter (model size, data size, compute) is varied, the system can undergo a sudden, qualitative change in its behavior, moving from a disordered phase (memorizing the data) to an ordered phase (generalizing). we can use the tools of statistical mechanics, like the study of critical exponents and universality classes, to analyze these transitions.
 
-**(added empirical cue):** track an order parameter such as linear-probe accuracy \$A_{\\text{probe}}(t)\\) or mutual information; sharp slope changes vs. a control variable (data, params, compute) indicate criticality (see **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** for a domino-like progression of capabilities).
+**(added empirical cue):** track an order parameter such as linear-probe accuracy \\(A_{\\text{probe}}(t)\\) or mutual information; sharp slope changes vs. a control variable (data, params, compute) indicate criticality (see **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** for a domino-like progression of capabilities).
 
 this thermodynamic framework is not just a new set of metaphors. it is a research program. it gives us a set of quantitative tools to analyze the behavior of LLMs, to make testable predictions, and to design better training algorithms. it allows us to see these models not as inscrutable oracles, but as complex, physical systems that are, in principle, understandable.
 
