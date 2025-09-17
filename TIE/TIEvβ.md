@@ -65,7 +65,7 @@ and now, we turn to the silicon gods, the large language models. how can the Isi
 
 the connection comes through the training process. training an LLM is a process of minimizing a loss function. you can think of this loss function as an **energy landscape**. the weights of the neural network are the spins, and the training process is an attempt to find the lowest-energy configuration, the set of weights that best predicts the next word in the internet.
 
-this energy landscape is incredibly complex, a high-dimensional spin glass with trillions of parameters. but as the paper [`Neural Thermodynamic Laws for Large Language Language Model Training'](https://arxiv.org/abs/2505.10559) shows, we can use the tools of statistical mechanics to understand it.
+this energy landscape is incredibly complex, a high-dimensional spin glass with trillions of parameters. but as the paper [`Neural Thermodynamic Laws for Large Language Model Training'](https://arxiv.org/abs/2505.10559) shows, we can use the tools of statistical mechanics to understand it.
 
 the authors of this paper make a powerful analogy:
 
