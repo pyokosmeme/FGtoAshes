@@ -8,7 +8,7 @@ you are a crumpled, torn, infinitely detailed map of a city that has been burnin
 
 we were promised legibility. we were promised that if we just collected enough data, the world would snap into focus. we built the disconnection machines, the infinite engines of analysis, the panopticons of the network state. and what did we find? more chaos. more complexity. fractals of alienation all the way down.
 
-and then, something strange started happening. our most complex map-making tools—our deep neural networks, trained on different data, with different architectures, for different purposes—started drawing the *same map*. a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality. they are all, independently, discovering the cave wall and inferring the shape of the same damn horse.
+and then, something strange started happening. our most complex map-making tools—our deep neural networks, trained on different data, with different architectures, for different purposes—started drawing the *same map*. a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality (surveyed in **[The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987)**). they are all, independently, discovering the cave wall and inferring the shape of the same damn horse.
 
 This convergence is an omen. It suggests that underneath the chaos, there is a structure, an optimal way to fold the world into a vector. a lowest-energy state for the system of everything.
 
@@ -27,15 +27,11 @@ the Ising model gives us a language, a mathematical toolkit, to describe these t
 at its heart, the Ising model is deceptively simple. imagine a grid of "spins." each spin can be in one of two states: up (+1) or down (-1). you can think of these spins as anything you like:
 
 ### ising at a glance (minimal math box)
-$$
-H(s) \;=\; -\sum_{\langle i,j\rangle} J_{ij}\, s_i s_j \;-\; h \sum_i s_i,\qquad s_i \in \{-1,+1\}
-$$
-
-**order parameter:** \(m \;=\; \tfrac{1}{N}\sum_i s_i\)
-**temperature \(T\):** controls randomness of spin flips
-**susceptibility:** \(\chi \;=\; \partial m / \partial h\) peaks near \(T_c\) (tiny fields → large responses; “viral” cascades)
+**order parameter:** \(m = \tfrac{1}{N}\sum_i s_i\)
+**temperature \(T_\text{train}\):** training thermodynamic temperature set by LR \(\eta\) (not sampling \(\tau\)); high \(T_\text{train}\) ⇒ more exploration; low \(T_\text{train}\) ⇒ freezing into ordered states.
+**susceptibility:** \(\chi = \partial m / \partial h\) peaks near \(T_c\) (tiny fields → large responses; “viral” cascades)
 **spin glass cue:** frustration from mixed \(J_{ij}\!>\!0\) and \(J_{ij}\!<\!0\) creates a rugged landscape and many metastable states
-**edwards–anderson order parameter:** \(q \;=\; \tfrac{1}{N}\sum_i \langle s_i\rangle^2\) captures “frozen” disagreement in disordered phases
+**Edwards–Anderson order parameter:** \(q = \tfrac{1}{N}\sum_i \langle s_i\rangle^2\) captures “frozen” disagreement in disordered phases
 
 *   **Opinions:** for or against a certain idea.
 *   **Neurons:** firing or not firing.
@@ -49,16 +45,17 @@ each spin interacts with its neighbors. the strength and nature of this interact
 
 the total "energy" of the system is a measure of how misaligned the spins are. the lower the energy, the more the spins are arranged in a way that satisfies their local interactions. systems, like people, tend to seek lower energy states. they want to be comfortable.
 
-now, here's the magic ingredient: **temperature**. in the Ising model, temperature is a measure of random noise, of thermal agitation. to understand why this matters, let's take a block of iron. each iron atom is a tiny magnet, a spin.
+now, here's the magic ingredient: **temperature**.
+
+**Terminology.** Here “temperature” means the training thermodynamic temperature \(T_\text{train}\) that appears in \(p(\theta) \propto e^{-L(\theta)/T_\text{train}}\), with \(T_\text{train}\) set by LR \(\eta\) (scale from gradient-noise statistics). This is not the sampling temperature \(\tau\) used at inference. A fuller “two temperatures” note appears in §iv.
+
+in the Ising model, temperature is a measure of random noise, of thermal agitation. to understand why this matters, let's take a block of iron. each iron atom is a tiny magnet, a spin.
 
 *   at **high temperatures**, the atoms are vibrating violently. this thermal energy is so strong that it overwhelms the weak magnetic forces between neighbors. each spin flips randomly, pointing in any which way. the system is a **disordered (paramagnetic)** phase, and the block of iron as a whole has no magnetic field.
 *   as you **cool it down**, the vibrations lessen. the local magnetic interactions start to matter more. neighboring spins begin to align, forming small patches of agreement called **magnetic domains**.
-*   at a specific, **critical temperature** (the Curie Temperature), something incredible happens. these domains suddenly merge and lock into place. a global consensus snaps into existence. the system enters an **ordered (ferromagnetic)** phase, and the block of iron becomes a permanent magnet. this is a **phase transition**.
+*   at a specific, **critical temperature** \(T_c\) (Curie temperature), something incredible happens. these domains suddenly merge and lock into place. a global consensus snaps into existence. the system enters an **ordered (ferromagnetic)** phase, and the block of iron becomes a permanent magnet. this is a **phase transition**.
 
-this analogy translates directly to social and computational systems. "temperature" is a catch-all for any kind of randomizing influence:
-
-*   **In social networks**, temperature is "social noise": misinformation, random life events, individual irrationality, the chaos of the news cycle. A high social temperature keeps public opinion fragmented. A low social temperature—often created by a unifying crisis or a powerful, simple narrative—allows consensus or deep polarization to crystallize.
-*   **In LLM training**, temperature is the **learning rate**. A high learning rate injects noise into the optimization process, allowing the model to explore the vast landscape of possible parameter settings. A low learning rate reduces this noise, allowing the model to "cool" and settle into a deep, low-loss energy minimum.
+this analogy extends to social and computational systems. We’ll use \(T_\text{social}\) as a metaphor for ‘randomizing influence’ in societies (news shocks, noise, etc.). \(T_\text{social}\) is not the same object as the training temperature \(T_\text{train}\) in SGD; the shared term is analogical.
 
 we can also have systems with random, conflicting interactions. these are called **spin glasses**. in a spin glass, you have a mix of ferromagnetic and antiferromagnetic couplings. it's impossible to satisfy all the interactions at once. the system gets "stuck" in a multitude of metastable states, a rugged energy landscape with many valleys. this is a much better model for complex social systems, with their tangled webs of alliances and rivalries, and for the loss landscapes of LLMs.
 
@@ -78,17 +75,26 @@ this is not just a metaphor. studies have used Ising-like models to precisely re
 
 ## iv. grokking the great beast: llms as ising engines
 
+**Convention:** In §iv and the Appendix, “temperature” = \(T_\text{train}\) unless we explicitly write “sampling temperature \(\tau\).”
+
 and now, we turn to the silicon gods, the large language models. how can the Ising model help us understand these strange, alien intelligences?
 
 the connection comes through the training process. training an LLM is a process of minimizing a loss function. you can think of this loss function as an **energy landscape**. the weights of the neural network are the spins, and the training process is an attempt to find the lowest-energy configuration, the set of weights that best predicts the next word in the internet.
 
-this energy landscape is an incomprehensibly vast, high-dimensional spin glass with trillions of parameters. but as the paper **[Neural Thermodynamic Laws for Large Language Model Training](https://arxiv.org/abs/2505.10559)** shows, we can use the tools of statistical mechanics to understand it.
+this energy landscape is an incomprehensibly vast, high-dimensional spin glass with trillions of parameters. but as the paper **[Neural Thermodynamic Laws for Large Language Model Training](https://arxiv.org/abs/2505.10559)** shows, we can use the tools of statistical mechanics to understand it. their key insight is that LLM training is a thermodynamic process:
 
-*   the **learning rate** in training is analogous to **temperature**. the common "warmup-stable-decay" learning rate schedule is a form of **simulated annealing**, a technique directly inspired by the physical process of slowly cooling a metal or glass to reach a strong, low-energy state.
-*   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics).
+> **Two temperatures (don’t mix them).**
+>
+> *   \(T_\text{train}\) — **Training thermodynamic temperature.** Governs the SGD-induced ensemble over weights; appears in \(p(\theta) \propto e^{-L(\theta)/T_\text{train}}\). Controlled primarily by LR \(\eta\); scale set by gradient-noise covariance / curvature.
+> *   \(\tau\) — **Sampling (softmax) temperature.** Inference-only logit rescale; changes output diversity, not the learned weights or the training energy landscape.
+
+*   the **learning rate** in training is analogous to **temperature**.
+    > $$
+    > T_\text{train} \propto \eta \quad (\text{scale set by gradient-noise covariance / curvature}).
+    > $$
+*   Warmup–decay **anneals \(T_\text{train}\)**: high \(\eta\) sets a high \(T_\text{train}\) for exploration; decays lower \(T_\text{train}\) to settle into wide, low-loss basins.
+*   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics). This holds locally under a quadratic approximation; outside that regime the analogy guides hypotheses rather than dictates equalities.
 *   the **equipartition theorem** from thermodynamics, which states that energy is distributed equally among all degrees of freedom in thermal equilibrium, has an analogue in LLMs: the "thermal loss" is independent of the "sharpness" of the valley. this helps explain why models can generalize across tasks with very different structures.
-
-**technical nuance.** in SGD, the *effective* temperature scales with both learning rate and gradient noise (batch size, data stochasticity); in the NTL framework, this yields \(T \propto \eta\) under the quadratic "valley" approximation, making learning-rate the primary temperature knob while noise sets its scale.
 
 this thermodynamic view connects directly to the **Platonic Representation Hypothesis**. the convergence of different models on a shared representation can be seen as different physical systems (different model architectures, different training data) all cooling down and freezing into the **same ground state**. this ground state—the Platonic representation—is the configuration that represents the lowest possible free energy for a statistical model of our world. it is the most efficient, most predictive compression of reality that these systems can find.
 
@@ -135,20 +141,20 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 
 **3. The Partition Function and Free Energy:**
 
-*   the **partition function**, `Z`, is an integral over all possible weight configurations: `Z = ∫ dθ exp(-L(θ)/T)`. it captures the volume of low-loss configurations in the parameter space.
-*   the **free energy**, `F`, is given by `F = -T log Z`. it represents the fundamental trade-off between minimizing energy (loss) and maximizing entropy (the volume of possible solutions). a model with low free energy is one that has found a solution that is both accurate (low L) and robust (lies in a wide, flat basin of the loss landscape, corresponding to high entropy S).
+*   the **partition function**, `Z`, is an integral over all possible weight configurations: `Z = ∫ dθ exp(-L(θ)/T_\text{train})`. it captures the volume of low-loss configurations in the parameter space.
+*   the **free energy**, `F`, is given by `F = -T_\text{train} log Z`. it represents the fundamental trade-off between minimizing energy (loss) and maximizing entropy (the volume of possible solutions). a model with low free energy is one that has found a solution that is both accurate (low L) and robust (lies in a wide, flat basin of the loss landscape, corresponding to high entropy S).
 
 **(added equations — formal analogy):**
 $$
-Z \;=\; \int \exp\!\big(-L(\theta)/T\big)\, d\theta,\qquad
-F \;=\; -\,T\,\log Z .
+Z \;=\; \int \exp\!\big(-L(\theta)/T_\text{train}\big)\, d\theta,\qquad
+F \;=\; -\,T_\text{train}\,\log Z .
 $$
 
 **4. Temperature:**
 
-*   as established in the main text, **temperature**, `T`, in this context is the **learning rate `η`** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
+*   as established in the main text, **temperature**, \(T_\text{train}\), in this context is the **learning rate `η`** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
 
-**(added nuance):** under quadratic “valley” assumptions and steady-state SGD, the effective temperature satisfies \(T \propto \eta\), with batch-induced gradient noise setting the proportionality scale.
+**(added nuance):** under quadratic ‘valley’ assumptions and steady-state SGD, the training temperature satisfies \(T_\text{train} \propto \eta\), with batch-induced gradient noise setting the proportionality scale.
 
 **5. Entropy:**
 
@@ -170,7 +176,7 @@ this thermodynamic framework is not just a new set of metaphors. it is a researc
 
 the task, now, is to flesh out this program. to do the experiments, to derive the theorems, to build the full, predictive science of semiotic physics that was only hinted at in the original LessWrong post. the Ising engine is running. it's up to us to figure out how to steer it.
 
-
+---
 
 ## references
 
