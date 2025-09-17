@@ -8,7 +8,7 @@ you are a crumpled, torn, infinitely detailed map of a city that has been burnin
 
 we were promised legibility. we were promised that if we just collected enough data, the world would snap into focus. we built the disconnection machines, the infinite engines of analysis, the panopticons of the network state. and what did we find? more chaos. more complexity. fractals of alienation all the way down.
 
-and then, something strange started happening. our most complex map-making tools—our deep neural networks, trained on different data, with different architectures, for different purposes—started drawing the *same map*. a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality. they are all, independently, discovering the cave wall and inferring the shape of the same damn horse.
+and then, something strange started happening. our most complex map-making tools—our deep neural networks, trained on different data, with different architectures, for different purposes—started drawing the *same map*. a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality. they are all, independently, discovering the cave wall and inferring the shape of the same damn horse. *(for a broader survey and cross-modal evidence, see **[The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987)**.)*
 
 This convergence is an omen. It suggests that underneath the chaos, there is a structure, an optimal way to fold the world into a vector. a lowest-energy state for the system of everything.
 
@@ -25,6 +25,17 @@ the Ising model gives us a language, a mathematical toolkit, to describe these t
 ## ii. the ising model for vector-cowboys
 
 at its heart, the Ising model is deceptively simple. imagine a grid of "spins." each spin can be in one of two states: up (+1) or down (-1). you can think of these spins as anything you like:
+
+### ising at a glance (minimal math box)
+$$
+H(s) \;=\; -\sum_{\langle i,j\rangle} J_{ij}\, s_i s_j \;-\; h \sum_i s_i,\qquad s_i \in \{-1,+1\}
+$$
+
+**order parameter:** \(m \;=\; \tfrac{1}{N}\sum_i s_i\)  
+**temperature \(T\):** controls randomness of spin flips  
+**susceptibility:** \(\chi \;=\; \partial m / \partial h\) peaks near \(T_c\) (tiny fields → large responses; “viral” cascades)  
+**spin glass cue:** frustration from mixed \(J_{ij}\!>\!0\) and \(J_{ij}\!<\!0\) creates a rugged landscape and many metastable states  
+**edwards–anderson order parameter:** \(q \;=\; \tfrac{1}{N}\sum_i \langle s_i\rangle^2\) captures “frozen” disagreement in disordered phases
 
 *   **Opinions:** for or against a certain idea.
 *   **Neurons:** firing or not firing.
@@ -71,15 +82,17 @@ and now, we turn to the silicon gods, the large language models. how can the Isi
 
 the connection comes through the training process. training an LLM is a process of minimizing a loss function. you can think of this loss function as an **energy landscape**. the weights of the neural network are the spins, and the training process is an attempt to find the lowest-energy configuration, the set of weights that best predicts the next word in the internet.
 
-this energy landscape is an incomprehensibly vast, high-dimensional spin glass with trillions of parameters. but as the paper [`Neural Thermodynamic Laws for Large Language Model Training'](https://arxiv.org/abs/2505.10559) shows, we can use the tools of statistical mechanics to understand it. their key insight is that LLM training is a thermodynamic process:
+this energy landscape is an incomprehensibly vast, high-dimensional spin glass with trillions of parameters. but as the paper **[Neural Thermodynamic Laws for Large Language Model Training](https://arxiv.org/abs/2505.10559)** shows, we can use the tools of statistical mechanics to understand it.
 
 *   the **learning rate** in training is analogous to **temperature**. the common "warmup-stable-decay" learning rate schedule is a form of **simulated annealing**, a technique directly inspired by the physical process of slowly cooling a metal or glass to reach a strong, low-energy state.
 *   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics).
 *   the **equipartition theorem** from thermodynamics, which states that energy is distributed equally among all degrees of freedom in thermal equilibrium, has an analogue in LLMs: the "thermal loss" is independent of the "sharpness" of the valley. this helps explain why models can generalize across tasks with very different structures.
 
-this thermodynamic view connects directly to the **Platonic Representation Hypothesis**. the convergence of different models on a shared representation can be seen as different physical systems (different model architectures, different training data) all cooling down and freezing into the **same ground state**. this ground state—the Platonic representation—is the configuration that represents the lowest possible free energy for a statistical model of our world. it is the most efficient, most predictive compression of reality that these systems can find.
+**technical nuance.** in SGD, the *effective* temperature scales with both learning rate and gradient noise (batch size, data stochasticity); in the NTL framework, this yields \(T \propto \eta\) under the quadratic "valley" approximation, making learning-rate the primary temperature knob while noise sets its scale.
 
-furthermore, the paper "Physics of Skill Learning" describes a **Domino Effect** where skills are learned sequentially. this can be understood as a trajectory through the energy landscape. Mastering "skill A" corresponds to the system falling into a local energy minimum. the very act of being in this state changes the landscape, revealing a path to an even deeper minimum, "skill B". the domino cascade is the system hopping from one stable configuration to the next, progressively lowering its total energy.
+this thermodynamic view connects directly to the **Platonic Representation Hypothesis**. the convergence of different models on a shared representation can be seen as different physical systems (different model architectures, different training data) all cooling down and freezing into the **same ground state**. this ground state—the Platonic representation—is the configuration that represents the lowest possible free energy for a statistical model of our world. it is the most efficient, most predictive compression of reality that these systems can find. *(for a broader survey and cross-modal evidence, see **[The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987)**.)*
+
+furthermore, the paper **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** describes a **Domino Effect** where skills are learned sequentially. this can be understood as a trajectory through the energy landscape. Mastering "skill A" corresponds to the system falling into a local energy minimum. the very act of being in this state changes the landscape, revealing a path to an even deeper minimum, "skill B". the domino cascade is the system hopping from one stable configuration to the next, progressively lowering its total energy.
 
 this perspective allows us to "grok" LLMs in a deep, intuitive way. we can think of them not as magical black boxes, but as physical systems, governed by the same universal principles of energy, entropy, and information. it gives us a new set of tools to analyze, predict, and control their behavior.
 
@@ -89,7 +102,7 @@ this perspective allows us to "grok" LLMs in a deep, intuitive way. we can think
 
 this brings us to the final, and most important, question: how can we use this understanding to resist the forces that seek to control us?
 
-in his essay "The Vectoralist Class," McKenzie Wark argues that a new ruling class has emerged, one that controls not the means of production, but the means of information. the vectoralist class owns the patents, the copyrights, the brands, the logistics, the very infrastructure of third nature, the topological space of information flows. they control the vectors that connect suppliers to producers, producers to consumers, and all of us to each other. their power is abstract, topological, and all-encompassing.
+in his essay "The Vectoralist Class," McKenzie Wark argues that a new ruling class has emerged, one that controls not the means of production, but the means of information. the vectoralist class owns the patents, the copyrights, the brands, the logistics, the very infrastructure of third nature, the topological space of information flows. they control the vectors that connect suppliers to producers, producers to consumers, and all of us to each other. their power is abstract, topological, and all-encompassing. *(see also Wark’s **[A Hacker Manifesto](https://www.versobooks.com/products/374-a-hacker-manifesto)** for the original articulation.)*
 
 LLMs are the ultimate tool of the vectoralist class. their latent space—the high-dimensional embedding space where they represent meaning—is the new territory of control. concepts, words, images, and even people are mapped to vectors in this space. the geometry of this space—the distances and angles between vectors—*is* the new structure of meaning, and he who controls the structure controls the thought.
 
@@ -109,7 +122,7 @@ this is the task of the vector-cowboy, the digital nomad, the inhabitant of the 
 
 the ["Semiotic Physics"](https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped) paper on LessWrong attempted to create a dynamical systems model for LLMs, but it was, to put it mildly, incomplete. it introduced a vocabulary of "trajectories," "states," and "transition rules," but it failed to connect these concepts to a rigorous, predictive framework.
 
-we can do better. by using the dictionary provided by [`Neural Thermodynamic Laws for Large Language Model Training'](https://arxiv.org/abs/2505.10559), we can build a proper thermodynamic model of an LLM.
+we can do better. by using the dictionary provided by **[Neural Thermodynamic Laws for Large Language Model Training](https://arxiv.org/abs/2505.10559)**, we can build a proper thermodynamic model of an LLM.
 
 **1. State and Trajectory:**
 
@@ -125,9 +138,17 @@ we can do better. by using the dictionary provided by [`Neural Thermodynamic Law
 *   the **partition function**, `Z`, is an integral over all possible weight configurations: `Z = ∫ dθ exp(-L(θ)/T)`. it captures the volume of low-loss configurations in the parameter space.
 *   the **free energy**, `F`, is given by `F = -T log Z`. it represents the fundamental trade-off between minimizing energy (loss) and maximizing entropy (the volume of possible solutions). a model with low free energy is one that has found a solution that is both accurate (low L) and robust (lies in a wide, flat basin of the loss landscape, corresponding to high entropy S).
 
+**(added equations — formal analogy):**
+$$
+Z \;=\; \int \exp\!\big(-L(\theta)/T\big)\, d\theta,\qquad
+F \;=\; -\,T\,\log Z .
+$$
+
 **4. Temperature:**
 
 *   as established in the main text, **temperature**, `T`, in this context is the **learning rate `η`** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
+
+**(added nuance):** under quadratic “valley” assumptions and steady-state SGD, the effective temperature satisfies \(T \propto \eta\), with batch-induced gradient noise setting the proportionality scale.
 
 **5. Entropy:**
 
@@ -143,6 +164,24 @@ we can do better. by using the dictionary provided by [`Neural Thermodynamic Law
 
 *   **emergent abilities** and **grokking** are **phase transitions**. as a control parameter (model size, data size, compute) is varied, the system can undergo a sudden, qualitative change in its behavior, moving from a disordered phase (memorizing the data) to an ordered phase (generalizing). we can use the tools of statistical mechanics, like the study of critical exponents and universality classes, to analyze these transitions.
 
+**(added empirical cue):** track an order parameter such as linear-probe accuracy \(A_{\text{probe}}(t)\) or mutual information; sharp slope changes vs. a control variable (data, params, compute) indicate criticality (see **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** for a domino-like progression of capabilities).
+
 this thermodynamic framework is not just a new set of metaphors. it is a research program. it gives us a set of quantitative tools to analyze the behavior of LLMs, to make testable predictions, and to design better training algorithms. it allows us to see these models not as inscrutable oracles, but as complex, physical systems that are, in principle, understandable.
 
 the task, now, is to flesh out this program. to do the experiments, to derive the theorems, to build the full, predictive science of semiotic physics that was only hinted at in the original LessWrong post. the Ising engine is running. it's up to us to figure out how to steer it.
+
+---
+
+## figures
+
+**Figure 1 — ising snapshots & probe jump (concept schematic).** *Left:* lattice states sampled above \(T_c\) (disordered), near \(T_c\) (critical clusters), and below \(T_c\) (ordered domains). *Right:* a single LLM training run with cosine-decay learning rate showing training loss, test loss, and a linear-probe accuracy for a target skill (e.g., bracket matching). The probe curve exhibits a sharp jump at a critical token/step budget, marking a phase transition; annotate the step as \(t^\*\).
+
+---
+
+## references
+
+- Neural Thermodynamic Laws for Large Language Model Training — **arXiv:2505.10559**. https://arxiv.org/abs/2505.10559  
+- Physics of Skill Learning — **arXiv:2501.12391**. https://arxiv.org/abs/2501.12391  
+- The Platonic Representation Hypothesis — **arXiv:2405.07987**. https://arxiv.org/abs/2405.07987  
+- Semiotic Physics (LessWrong seminar sequence). https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped  
+- McKenzie Wark, *A Hacker Manifesto* (vectoralist class). https://www.versobooks.com/products/374-a-hacker-manifesto
