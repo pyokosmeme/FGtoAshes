@@ -1,6 +1,6 @@
 # THE ISING ENGINE
 
-## A SENSE-MAKING MANUAL FOR THE VECTORAL AGE
+**A SENSE-MAKING MANUAL FOR THE VECTORAL AGE**
 
 ## i. what the fuck is an ising model, and why should i care?
 
