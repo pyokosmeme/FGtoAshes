@@ -8,7 +8,7 @@ you are a crumpled, torn, infinitely detailed map of a city that has been burnin
 
 we were promised legibility. we were promised that if we just collected enough data, the world would snap into focus. we built the disconnection machines, the infinite engines of analysis, the panopticons of the network state. and what did we find? more chaos. more complexity. fractals of alienation all the way down.
 
-and then, something strange started happening. our most complex map-making tools—our deep neural networks, trained on different data, with different architectures, for different purposes—started drawing the *same map*. a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality. they are all, independently, discovering the cave wall and inferring the shape of the same damn horse. *(for a broader survey and cross-modal evidence, see **[The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987)**.)*
+and then, something strange started happening. our most complex map-making tools—our deep neural networks, trained on different data, with different architectures, for different purposes—started drawing the *same map*. a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality. they are all, independently, discovering the cave wall and inferring the shape of the same damn horse.
 
 This convergence is an omen. It suggests that underneath the chaos, there is a structure, an optimal way to fold the world into a vector. a lowest-energy state for the system of everything.
 
@@ -31,10 +31,10 @@ $$
 H(s) \;=\; -\sum_{\langle i,j\rangle} J_{ij}\, s_i s_j \;-\; h \sum_i s_i,\qquad s_i \in \{-1,+1\}
 $$
 
-**order parameter:** \(m \;=\; \tfrac{1}{N}\sum_i s_i\)  
-**temperature \(T\):** controls randomness of spin flips  
-**susceptibility:** \(\chi \;=\; \partial m / \partial h\) peaks near \(T_c\) (tiny fields → large responses; “viral” cascades)  
-**spin glass cue:** frustration from mixed \(J_{ij}\!>\!0\) and \(J_{ij}\!<\!0\) creates a rugged landscape and many metastable states  
+**order parameter:** \(m \;=\; \tfrac{1}{N}\sum_i s_i\)
+**temperature \(T\):** controls randomness of spin flips
+**susceptibility:** \(\chi \;=\; \partial m / \partial h\) peaks near \(T_c\) (tiny fields → large responses; “viral” cascades)
+**spin glass cue:** frustration from mixed \(J_{ij}\!>\!0\) and \(J_{ij}\!<\!0\) creates a rugged landscape and many metastable states
 **edwards–anderson order parameter:** \(q \;=\; \tfrac{1}{N}\sum_i \langle s_i\rangle^2\) captures “frozen” disagreement in disordered phases
 
 *   **Opinions:** for or against a certain idea.
@@ -90,7 +90,7 @@ this energy landscape is an incomprehensibly vast, high-dimensional spin glass w
 
 **technical nuance.** in SGD, the *effective* temperature scales with both learning rate and gradient noise (batch size, data stochasticity); in the NTL framework, this yields \(T \propto \eta\) under the quadratic "valley" approximation, making learning-rate the primary temperature knob while noise sets its scale.
 
-this thermodynamic view connects directly to the **Platonic Representation Hypothesis**. the convergence of different models on a shared representation can be seen as different physical systems (different model architectures, different training data) all cooling down and freezing into the **same ground state**. this ground state—the Platonic representation—is the configuration that represents the lowest possible free energy for a statistical model of our world. it is the most efficient, most predictive compression of reality that these systems can find. *(for a broader survey and cross-modal evidence, see **[The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987)**.)*
+this thermodynamic view connects directly to the **Platonic Representation Hypothesis**. the convergence of different models on a shared representation can be seen as different physical systems (different model architectures, different training data) all cooling down and freezing into the **same ground state**. this ground state—the Platonic representation—is the configuration that represents the lowest possible free energy for a statistical model of our world. it is the most efficient, most predictive compression of reality that these systems can find.
 
 furthermore, the paper **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** describes a **Domino Effect** where skills are learned sequentially. this can be understood as a trajectory through the energy landscape. Mastering "skill A" corresponds to the system falling into a local energy minimum. the very act of being in this state changes the landscape, revealing a path to an even deeper minimum, "skill B". the domino cascade is the system hopping from one stable configuration to the next, progressively lowering its total energy.
 
@@ -102,7 +102,7 @@ this perspective allows us to "grok" LLMs in a deep, intuitive way. we can think
 
 this brings us to the final, and most important, question: how can we use this understanding to resist the forces that seek to control us?
 
-in his essay "The Vectoralist Class," McKenzie Wark argues that a new ruling class has emerged, one that controls not the means of production, but the means of information. the vectoralist class owns the patents, the copyrights, the brands, the logistics, the very infrastructure of third nature, the topological space of information flows. they control the vectors that connect suppliers to producers, producers to consumers, and all of us to each other. their power is abstract, topological, and all-encompassing. *(see also Wark’s **[A Hacker Manifesto](https://www.versobooks.com/products/374-a-hacker-manifesto)** for the original articulation.)*
+in his essay "The Vectoralist Class," McKenzie Wark argues that a new ruling class has emerged, one that controls not the means of production, but the means of information. the vectoralist class owns the patents, the copyrights, the brands, the logistics, the very infrastructure of third nature, the topological space of information flows. they control the vectors that connect suppliers to producers, producers to consumers, and all of us to each other. their power is abstract, topological, and all-encompassing.
 
 LLMs are the ultimate tool of the vectoralist class. their latent space—the high-dimensional embedding space where they represent meaning—is the new territory of control. concepts, words, images, and even people are mapped to vectors in this space. the geometry of this space—the distances and angles between vectors—*is* the new structure of meaning, and he who controls the structure controls the thought.
 
@@ -170,18 +170,12 @@ this thermodynamic framework is not just a new set of metaphors. it is a researc
 
 the task, now, is to flesh out this program. to do the experiments, to derive the theorems, to build the full, predictive science of semiotic physics that was only hinted at in the original LessWrong post. the Ising engine is running. it's up to us to figure out how to steer it.
 
----
 
-## figures
-
-**Figure 1 — ising snapshots & probe jump (concept schematic).** *Left:* lattice states sampled above \(T_c\) (disordered), near \(T_c\) (critical clusters), and below \(T_c\) (ordered domains). *Right:* a single LLM training run with cosine-decay learning rate showing training loss, test loss, and a linear-probe accuracy for a target skill (e.g., bracket matching). The probe curve exhibits a sharp jump at a critical token/step budget, marking a phase transition; annotate the step as \(t^\*\).
-
----
 
 ## references
 
-- Neural Thermodynamic Laws for Large Language Model Training — **arXiv:2505.10559**. https://arxiv.org/abs/2505.10559  
-- Physics of Skill Learning — **arXiv:2501.12391**. https://arxiv.org/abs/2501.12391  
-- The Platonic Representation Hypothesis — **arXiv:2405.07987**. https://arxiv.org/abs/2405.07987  
-- Semiotic Physics (LessWrong seminar sequence). https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped  
-- McKenzie Wark, *A Hacker Manifesto* (vectoralist class). https://www.versobooks.com/products/374-a-hacker-manifesto
+- Neural Thermodynamic Laws for Large Language Model Training — **arXiv:2505.10559**. https://arxiv.org/abs/2505.10559
+- Physics of Skill Learning — **arXiv:2501.12391**. https://arxiv.org/abs/2501.12391
+- The Platonic Representation Hypothesis — **arXiv:2405.07987**. https://arxiv.org/abs/2405.07987
+- Semiotic Physics (LessWrong seminar sequence). https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped
+- McKenzie Wark, *A Hacker Manifesto* (vectoralist class). https://www.hup.harvard.edu/books/9780674015432
