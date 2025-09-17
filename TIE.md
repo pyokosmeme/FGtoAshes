@@ -81,7 +81,7 @@ to fight the vectoralist class, you must understand their terrain. their terrain
 
 ## APPENDIX: A THERMODYNAMIC DICTIONARY FOR LLMS (SEMIOTIC PHYSICS REVISITED)
 
-the "Semiotic Physics" paper attempted to build a formal language for LLM dynamics using concepts from dynamical systems. it was a noble effort, but it remained abstract, failing to connect its formalism to the concrete, physical process of training. here, we attempt to rectify that by building a dictionary that directly maps the thermodynamic concepts from `2505.10559v1.pdf` onto the dynamics of LLMs, providing a more grounded and predictive framework.
+the ["Semiotic Physics"](https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped) essay attempted to build a formal language for LLM dynamics using concepts from dynamical systems. it was a noble effort, but it remained abstract, failing to connect its formalism to the concrete, physical process of training. here, we attempt to rectify that by building a dictionary that directly maps the thermodynamic concepts from [`Neural Thermodynamic Laws for Large Language Model Training'](https://arxiv.org/abs/2505.10559) onto the dynamics of LLMs, providing a more grounded and predictive framework.
 
 **the core mapping: llm training as a thermodynamic process**
 
