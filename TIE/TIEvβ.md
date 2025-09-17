@@ -84,7 +84,7 @@ this thermodynamic perspective allows us to "grok" LLMs in a deep, intuitive way
 
 this brings us to the final, and most important, question: how can we use this understanding to resist the forces that seek to control us?
 
-in his essay "The Vectoralist Class," McKenzie Wark argues that a new ruling class has emerged, one that controls not the means of production, but the means of information. the vectoralist class owns the patents, the copyrights, the brands, the logistics, the very infrastructure of third nature, the topological space of information flows. they control the vectors that connect suppliers to producers, producers to consumers, and all of us to each other. their power is abstract, topological, and all-encompassing.
+in their essay "The Vectoralist Class," McKenzie Wark argues that a new ruling class has emerged, one that controls not the means of production, but the means of information. the vectoralist class owns the patents, the copyrights, the brands, the logistics, the very infrastructure of third nature, the topological space of information flows. they control the vectors that connect suppliers to producers, producers to consumers, and all of us to each other. their power is abstract, topological, and all-encompassing.
 
 LLMs and other large-scale AI models are the ultimate tools of the vectoralist class. they are machines for mapping, predicting, and controlling the vector spaces of language and society. they create what Wark calls a "third nature," an information envelope that overlays and governs the physical world.
 
