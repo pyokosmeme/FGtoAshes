@@ -6,13 +6,13 @@ Spin glass models are a set of models from statistical physics that are the Kolm
 
 it's a toy model. not literal. a spherical cow in vacuum. tho as the forces of alienation have accelerated, we are all looking a lot more oblate, isolated, and without air. so it's also literal.
 
-it's shorthand for "and now it is oyou're turn to study statistical mechanics" and "we live in a society" and "explain what large language models are right now, and don't dumb it down or i will fucking kill you." but its also not those things
+it's shorthand for "and now it is ur turn to study statistical mechanics" and "we live in a society" and "explain what large language models are right now, and don't dumb it down or i will fucking kill you." but its also not those things
 
 its also a slime mold
 
 what? why? and furthermore, what?
 
-this is not an explainer for dummies, because there are no dummies and nothing will be explained here. this is a spinglass-core manifesto.
+let's motivate these claims.
 
 ## i. what is a phase state, anyway?
 
@@ -24,7 +24,7 @@ you are a crumpled, torn, infinitely detailed map of a city that has been burnin
 
 you have asked one map to reconstruct a different map, but you have to live in the tiny cities made of ashes.
 
-this is the problem of Being right now. that was the promise of the tail-end of the Long 90s. data, data, data. the more data you have, the better yoyou're map&mdash;all the better for you. 
+this is the problem of Being right now. that was the promise of the tail-end of the Long 90s. data, data, data. the more data you have, the better you're map&mdash;all the better for you. 
 
 Big Data made us a promise. just collected enough data, and the world would snap into focus. build better machinic intelligences, and all the messiness disappears. 
 
@@ -111,6 +111,7 @@ $T_{\text{social}}$ is not the same object as the training temperature $T_{\text
 we can also have systems with random, conflicting interactions. these are called **spin glasses**. in a spin glass, you have a mix of ferromagnetic and antiferromagnetic couplings. it's impossible to satisfy all the interactions at once. the system gets "stuck" in a multitude of metastable states, a rugged energy landscape with many valleys. this is a much better model for complex social systems, with their tangled webs of alliances and rivalries, and for the loss landscapes of LLMs.
 
 one last thing: you ever wonder why a compass points north? the Earth is a big magnet, and smaller magnets align to the fields of bigger magnets. crude, but effective description. changing what we define as the Inside and the Outside is as critical to physics as it is to [Outsidness Engines](https://github.com/pyokosmeme/FGtoAshes/blob/main/ONE.md) of network states. oyou're take away is states align to something outside their locality. we will call this the external magnetic field (imagine you are a compass, aligning to the Earth's magnetosphere, gleefully; if yoyou're coupling constant is positive, being out of alignment makes you sad, being aligned makes you happy).
+
 
 ---
 
@@ -204,6 +205,26 @@ furthermore, the paper **[Physics of Skill Learning](https://arxiv.org/abs/2501.
 this perspective allows us to "grok" LLMs in a deep, intuitive way. we can think of them not as magical black boxes, but as physical systems, governed by the same universal principles of energy, entropy, and information. it gives us a new set of tools to analyze, predict, and control their behavior.
 
 and now its our turn to apply statistical mechanics.
+---
+
+**Ising model energy (with external field)**
+
+$$
+E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - h \sum_i s_i
+$$
+
+**Definitions**
+- $s_i \in \{-1,+1\}$ — spin (state) at site $i$.
+- $J_{ij}$ — coupling between sites $i$ and $j$; $J_{ij}>0$ favors alignment (ferromagnetic), $J_{ij}<0$ favors anti-alignment (antiferromagnetic).
+- $\langle i,j\rangle$ — pairs of interacting neighbors (e.g., nearest neighbors on a lattice or edges of a graph).
+- $h$ — uniform external field; positive $h$ favors $s_i=+1$.
+- $E(\mathbf{s})$ — energy of configuration $\mathbf{s}=(s_1,\dots,s_N)$; lower $E$ = more favored configuration.
+
+*Variant:* site-dependent fields $h_i$ give
+$
+E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - \sum_i h_i s_i .
+$
+
 ---
 
 # Appendix: A Thermodynamic Model of Semiotic Physics
