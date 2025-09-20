@@ -191,9 +191,7 @@ but, the paper **[Neural Thermodynamic Laws for Large Language Model Training](h
 > *   $\tau$ — **Sampling (softmax) temperature.** Inference-only logit rescale; changes output diversity, not the learned weights or the training energy landscape.
 
 *   the **learning rate** in training is analogous to **temperature**.
-    $
-    T_{\text{train}} \propto \eta \quad (\text{scale set by gradient-noise covariance / curvature}).
-    $
+    $T_{\text{train}} \propto \eta \quad (\text{scale set by gradient-noise covariance / curvature}).$
 *   Warmup–decay **anneals $T_{\text{train}}$**: high $\eta$ sets a high $T_{\text{train}}$ for exploration; decays lower $T_{\text{train}}$ to settle into wide, low-loss basins.
 *   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics). This holds locally under a quadratic approximation; outside that regime the analogy guides hypotheses rather than dictates equalities.
 *   the **equipartition theorem** from thermodynamics, which states that energy is distributed equally among all degrees of freedom in thermal equilibrium, has an analogue in LLMs: the "thermal loss" is independent of the "sharpness" of the valley. this helps explain why models can generalize across tasks with very different structures.
@@ -209,9 +207,7 @@ and now its our turn to apply statistical mechanics.
 
 **Ising model energy (with external field)**
 
-$$
-E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - h \sum_i s_i
-$$
+$E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - h \sum_i s_i$
 
 **Definitions**
 - $s_i \in \{-1,+1\}$ — spin (state) at site $i$.
@@ -243,14 +239,9 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 **3. The Partition Function and Free Energy:**
 
 *   the **partition function**, $ Z $, is an integral over all possible weight configurations:
-  $$
-  Z \;= \; \int d\theta \, \exp\!\big( -L(\theta) / T_{\text{train}} \big).
-  $$
+  $Z \;= \; \int d\theta \, \exp\!\big( -L(\theta) / T_{\text{train}} \big).$
 *   the **free energy**, $ F $, is given by
-  $$
-  F \;= \; - \, T_{\text{train}} \, \log Z .
-  $$
-
+  $  \;= \; - \, T_{\text{train}} \, \log Z .$  
 **4. Temperature:**
 
 *   as established in the main text, **temperature**, $ T_{\text{train}} $, in this context is the **learning rate $\eta$** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
