@@ -285,8 +285,8 @@ coarse-grain the loss landscape into **fast (valley)** and **slow (river)** dire
 **emergence as a phase transition.** many “it suddenly works” events—induction heads, grokking, domino-like cascades of skills—look like phase transitions in the coarse-grained variables. vary a control parameter (scale, data, compute, curriculum, regularization) and an order parameter jumps; the model reorganizes qualitatively. universality means the jump profile looks similar across families of models and tasks.
 
 **practical levers, translated.**
-- **cooling/heating \(T_{\text{train}}\)**: adjust learning rate and batch-size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
-- **rewiring couplings \(J_{ij}\)**: change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
+- **cooling/heating** $T_{\text{train}}$ **:** adjust learning rate and batch-size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
+- **rewiring couplings** $J_{ij}$ **:** change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
 - **tilting the field \(h\)**: steer with incentives (which narrative wins) or prompts/objectives (which basin you settle into).
 - **watching order parameters**: track coarse diagnostics—linear probes, mutual information, phase-sensitive metrics—rather than drowning in micro-losses; look for sharp slope changes and long-range correlations.
 
