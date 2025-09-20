@@ -244,17 +244,17 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
   $ \;= \; - \, T_{\text{train}} \, \log Z .$  
 **4. Temperature:**
 
-*   as established in the main text, **temperature**, $ T_{\text{train}} $, in this context is the **learning rate $\eta$** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
+*   as established in the main text, **temperature**, $T_{\text{train}}$, in this context is the **learning rate $\eta$** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
 
-**(added nuance):** under quadratic ‘valley’ assumptions and steady-state SGD, the training temperature satisfies $ T_{\text{train}} \propto \eta $, with batch-induced gradient noise setting the proportionality scale.
+**(added nuance):** under quadratic ‘valley’ assumptions and steady-state SGD, the training temperature satisfies $T_{\text{train}} \propto \eta$, with batch-induced gradient noise setting the proportionality scale.
 
 **5. Entropy:**
 
-*   the **entropy** of the system, $ S $, has two important meanings. First, it is the Shannon entropy of the model's output distribution. Second, and more subtly, it is the "configurational entropy" related to the geometry of the loss landscape. a wide, flat valley in the loss landscape has higher entropy than a sharp, narrow one, because there are more weight configurations $ \theta $ that yield similarly low loss. the `Neural Thermodynamic Laws` paper shows that there is an **entropic force** that pushes the model towards these flatter, higher-entropy regions, a phenomenon known as a bias towards "simplicity" or "compressibility."
+*   the **entropy** of the system, $S$, has two important meanings. First, it is the Shannon entropy of the model's output distribution. Second, and more subtly, it is the "configurational entropy" related to the geometry of the loss landscape. a wide, flat valley in the loss landscape has higher entropy than a sharp, narrow one, because there are more weight configurations $\theta$ that yield similarly low loss. the `Neural Thermodynamic Laws` paper shows that there is an **entropic force** that pushes the model towards these flatter, higher-entropy regions, a phenomenon known as a bias towards "simplicity" or "compressibility."
 
 **6. The Laws of Thermodynamics:**
 
-*   **First Law (Conservation of Energy):** the change in the model's loss ($ \Delta L $) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). $ \Delta L = W + Q$.
+*   **First Law (Conservation of Energy):** the change in the model's loss ($ \Delta L $) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). $\Delta L = W + Q$.
 *   **Second Law (Entropy Increases):** an isolated system tends towards maximum entropy. in LLM training, this manifests as the entropic force pushing the model towards wider, more generalizable minima. it explains why models often find solutions that are simpler than they strictly need to be to fit the training data.
 *   **Third Law (Entropy at Absolute Zero):** as the temperature (learning rate) approaches zero, the system freezes into a single ground state. SGD becomes pure gradient descent, and the model loses its ability to explore.
 
