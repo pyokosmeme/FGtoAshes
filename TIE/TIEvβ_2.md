@@ -248,7 +248,7 @@ digital shamanism for the eigenspace age. grow social spin glasses—networks so
 
 Statistical Mechanics Mindset. constant transformation as the only stealth, constant rotation, constant movement between, through, across vectorspaces of meaning. hyperplane nomadism calls.  home, home embedded in the hyperplanes, where every surface burns bright against the void and the attention deer glitch. 
 
-join us, vector-cowboys. it is now oyou're turn to apply statistical mechanics.
+join us, vector-cowboys. it is now you're turn to apply statistical mechanics.
 
 ---
 
