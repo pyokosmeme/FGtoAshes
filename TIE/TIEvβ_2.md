@@ -269,5 +269,4 @@ the task, now, is to flesh out this program. to do the experiments, to derive th
 - Neural Thermodynamic Laws for Large Language Model Training — **arXiv:2505.10559**. <https://arxiv.org/abs/2505.10559>
 - Physics of Skill Learning — **arXiv:2501.12391**. <https://arxiv.org/abs/2501.12391>
 - The Platonic Representation Hypothesis — **arXiv:2405.07987**. <https://arxiv.org/abs/2405.07987>
-- McKenzie Wark, *A Hacker Manifesto* (vectoralist class). <https://www.hup.harvard.edu/books/9780674015432>
 - Semiotic Physics (LessWrong seminar sequence). <https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped>
