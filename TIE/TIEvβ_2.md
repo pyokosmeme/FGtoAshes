@@ -198,7 +198,8 @@ but, the paper **[Neural Thermodynamic Laws for Large Language Model Training](h
 *   the **learning rate** in training is analogous to **temperature**.
     $T_{\text{train}} \propto \eta \quad (\text{scale set by gradient-noise covariance / curvature}).$
 *   Warmup–decay **anneals $T_{\text{train}}$**: high $\eta$ sets a high $T_{\text{train}}$ for exploration; decays lower $T_{\text{train}}$ to settle into wide, low-loss basins.
-*   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics). This holds locally under a quadratic approximation; outside that regime the analogy guides hypotheses rather than dictates equalities.
+*   the loss landscape has "river valleys": flat, slow directions and sharp, fast directions. the training process involves rapidly equilibrating in the sharp "valley" directions (the fast, thermal dynamics) while slowly drifting along the flat "river" directions (the slow, entropic dynamics). Thi
+*   s holds locally under a quadratic approximation; outside that regime the analogy guides hypotheses rather than dictates equalities.
 *   the **equipartition theorem** from thermodynamics, which states that energy is distributed equally among all degrees of freedom in thermal equilibrium, has an analogue in LLMs: the "thermal loss" is independent of the "sharpness" of the valley. this helps explain why models can generalize across tasks with very different structures.
 
 this thermodynamic view connects directly to the **Platonic Representation Hypothesis**. the convergence of different models on a shared representation can be seen as different physical systems (different model architectures, different training data) all cooling down and freezing into the **same ground state**. this ground state—the Platonic representation—is the configuration that represents the lowest possible free energy for a statistical model of oyou're world. it is the most efficient, most predictive compression of reality that these systems can find.
@@ -244,9 +245,7 @@ when many neighbors agree, a **domain** forms: a borough of shared stance. at th
 how touchy is the city? that’s **susceptibility**: if you whisper at one corner, does the dashboard dial barely twitch or swing wildly? and how far does influence travel before it fades to background hum? that’s the **correlation length**: one block, ten blocks, or the whole metro. near the snap point these distances grow; rumors cross rivers; a single spark lights multiple boroughs. that’s why tipping points feel spooky: you did almost nothing, and then everything moved.
 
 now a necessary reminder of the simplest machinery we’re abstracting. take switches $s_i\in\{-1,+1\}$ sitting on a graph. neighbors $i,j$ tug on each other with strength $J_{ij}$; a personal nudge $h_i$ biases each on its own. the system assigns a score to any configuration:
-\[
-E(\mathbf{s})=-\sum_{\langle i,j\rangle}J_{ij}s_is_j-\sum_i h_is_i.
-\]
+$E(\mathbf{s})=-\sum_{\langle i,j\rangle}J_{ij}s_is_j-\sum_i h_is_i.$
 lower $E$ means “the tugs and nudges are more satisfied.” cities drift toward lower $E$ not because they are virtuous, but because noise kicks them around and the arrangements that satisfy more tugs are the ones that last.
 
 **thermodynamics of learning (without the mystique).** training runs at a *temperature*, but here temperature means something you already know how to set: the learning-rate–plus–noise budget. call it $T_{\text{train}}$. high $T_{\text{train}}$ is a hot kitchen—updates jump, the model explores, narrow cul-de-sacs melt away. low $T_{\text{train}}$ is a cool evening—updates settle, the model chooses a wide, comfortable avenue and stays there. there is also the sampling temperature $\tau$ you set at inference; that one only changes how talkative the model is after it has already learned its city map.
@@ -256,7 +255,7 @@ the loss landscape itself can be coarse-grained into **fast valley directions** 
 **emergence as a civic event.** in this picture, “it suddenly works” is a citywide re-zoning. add a bit more training data, unlock one more layer, reorder the curriculum, and a measurable dial crosses a threshold: induction appears, long-horizon reasoning stabilizes, tool-use chains hold together. different towns can share the same snap profile because the helicopter variables obey the same few rules even if the street art differs—that is the whole point of coarse-graining.
 
 **practical levers you can actually pull.**
-- *cool or heat $T_{\text{train}}$.* learning rate and batch-size–set noise are the thermostat; warmup–decay is your season change.
+- *cool or heat* $T_{\text{train}}$. learning rate and batch-size–set noise are the thermostat; warmup–decay is your season change.
 - *rewire the graph.* change who “talks” to whom and with what strength—recommendation edges, collaboration edges, curriculum edges. you’re editing the $J_{ij}$ map.
 - *tilt the field $h_i$.* incentives, prompts, and objectives decide which borough wins when symmetry breaks.
 - *watch the right dial.* track order parameters (simple probes, mutual information, phase-sensitive metrics) instead of drowning in micro-loss. you’re looking for the snap and the spreading distance, not every flicker.
@@ -269,17 +268,17 @@ coarse-grain the loss landscape into **fast (valley)** and **slow (river)** dire
 **emergence as a phase transition.** many “it suddenly works” events—induction heads, grokking, domino‑like cascades of skills—look like phase transitions in coarse‑grained variables. vary a control parameter (scale, data, compute, curriculum, regularization) and an order parameter jumps; the model reorganizes qualitatively. universality means the jump profile looks similar across families of models and tasks.
 
 **practical levers, translated.**
-- **cooling/heating $T_{\text{train}}$:** adjust learning rate and batch‑size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
-- **rewiring couplings $J_{ij}$:** change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
-- **tilting the field $h$:** steer with incentives (which narrative wins) or prompts/objectives (which basin you settle into).
+- **cooling/heating** $T_{\text{train}}$ **:** adjust learning rate and batch‑size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
+- **rewiring couplings** $J_{ij}$ **:** change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
+- **tilting the field** $h$ **:** steer with incentives (which narrative wins) or prompts/objectives (which basin you settle into).
 - **watching order parameters:** track coarse diagnostics—linear probes, mutual information, phase‑sensitive metrics—rather than drowning in micro‑losses; look for sharp slope changes and long‑range correlations.
 
 **why this belongs in the ising enigma.** once you accept that **coarse‑grained variables drive the plot**, you get a unified way to reason about networked societies and networked weights. phases organize the chaos. critical points warn where the system is hypersensitive. annealing schedules, graph rewiring, and gentle field nudges become **thermodynamic controls** for culture and code alike.
 s. this isn’t just metaphor; it’s a workable phenomenology that reproduces observed phases and hysteresis in networked behavior.
 
 **thermodynamics of learning (don’t mix the temperatures).**
-- **\(T_{\text{train}}\)** — the *training* thermodynamic temperature. in practice: the learning-rate–plus–gradient-noise dial that sets how “hot” sgd runs. high \(T_{\text{train}}\): exploration (melting out of narrow minima). low \(T_{\text{train}}\): settlement (freezing into wide basins).
-- **\(\tau\)** — the *sampling* temperature at inference. a logit rescale for style/diversity. it does not change the learned energy landscape.
+- **$T_{\text{train}}$** — the *training* thermodynamic temperature. in practice: the learning-rate–plus–gradient-noise dial that sets how “hot” sgd runs. high $T_{\text{train}}$: exploration (melting out of narrow minima). low $T_{\text{train}}$: settlement (freezing into wide basins).
+- **$\tau$** — the *sampling* temperature at inference. a logit rescale for style/diversity. it does not change the learned energy landscape.
 
 coarse-grain the loss landscape into **fast (valley)** and **slow (river)** directions. sgd rapidly equilibrates in the sharp directions (thermal jiggle) while drifting along the flat ones (entropic wander). equipartition-style behavior shows up: noise contributes roughly equally per effective degree of freedom, which is why wide valleys generalize and why annealing schedules matter.
 
