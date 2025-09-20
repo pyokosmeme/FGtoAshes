@@ -254,7 +254,7 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 
 **6. The Laws of Thermodynamics:**
 
-*   **First Law (Conservation of Energy):** the change in the model's loss ($ \Delta L $) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). $\Delta L = W + Q$.
+*   **First Law (Conservation of Energy):** the change in the model's loss ($\Delta L$) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). $\Delta L = W + Q$.
 *   **Second Law (Entropy Increases):** an isolated system tends towards maximum entropy. in LLM training, this manifests as the entropic force pushing the model towards wider, more generalizable minima. it explains why models often find solutions that are simpler than they strictly need to be to fit the training data.
 *   **Third Law (Entropy at Absolute Zero):** as the temperature (learning rate) approaches zero, the system freezes into a single ground state. SGD becomes pure gradient descent, and the model loses its ability to explore.
 
