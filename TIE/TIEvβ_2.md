@@ -229,37 +229,40 @@ $E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - \sum_i h_i s_i .
 
 ## v. coarse-graining and phase transitions
 
-**what is coarse-graining, really?** when a system is too jagged to think about spin-by-spin (or weight-by-weight), you compress microstates into macrostates that still predict what you care about. you blur local jitter and track a few collective variables. in learning-systems terms: billions of parameters collapse into a handful of **skills** or capabilities; training dynamics over skills become the effective state of the model. the move is principled: discard degrees of freedom that don’t change the macroscopic story; keep the ones that do.
+**what is coarse-graining, really?** imagine a city made of switches. every apartment has a light that can be on or off; every block has gossip that either spreads or fizzles. you could track each bulb and each whisper—good luck—or you could step back and watch neighborhoods. that step back is *coarse-graining*: we stop narrating every flicker and keep only what drives the plot. in practice, billions of weights collapse into a few **skills** you can name, and the training story becomes a story about how those skills rise, couple, and stabilize.
 
-**definitions (for the techno-poet, minimal physics):**
-- **microstate:** the detailed configuration. for magnets: every little $s_i\in\{-1,+1\}$. for models: all the weights. too many to hold in your head.
-- **macrostate:** a summary that still predicts interesting behavior. for magnets: the average of the $s_i$ (magnetization). for models: a capability score, a linear probe, a confusion matrix.
-- **order parameter:** the number (or small set of numbers) that tells you which phase you’re in. think “is this capability off or on?”
-- **phase:** a stable behavioral regime identified by the order parameter. examples: unpolarized chat vs. echo-chamber lock-in; pre-grok vs. post-grok.
-- **phase transition:** a sharp change in macro-behavior when you nudge a control knob (data, scale, compute, curriculum, regularization). the graph doesn’t slope; it snaps.
-- **coupling $J_{ij}$:** how strongly two parts try to agree or disagree. positive $J_{ij}$ says “align with your neighbor”; negative $J_{ij}$ says “oppose.” in social graphs: homophily vs. antagonism.
-- **external field $h_i$ (or $h$):** a background nudge. recommendation systems, incentives, prompts, or constraints that bias choices.
-- **domain:** a region where many neighbors agree. echo chamber, but in lattice form.
-- **domain wall:** the tense border where two domains meet. where arguments live.
-- **susceptibility:** sensitivity of the order parameter to tiny nudges. if it’s large, a whisper moves the crowd.
-- **correlation length:** how far influence travels. short = gossip dies locally; long = rumors sweep the city.
-- **annealing:** start hot, end cool. in training: higher learning rate early (explore), lower later (settle).
-- **$T_{\text{train}}$:** the *training temperature*—a stand‑in for learning-rate–plus–gradient-noise. high $T_{\text{train}}$ explores; low $T_{\text{train}}$ settles.
-- **$\tau$:** the *sampling temperature* at inference. a logit rescale for style/diversity; it does not change what was learned.
+when we talk about a **microstate**, we mean the city at the mosquito level: every switch $s_i\in\{-1,+1\}$, every weight, every tiny decision recorded. a **macrostate** is the view from a helicopter: how bright the city is overall, which neighborhoods are coordinated, which skills the model can actually deploy. the helicopter view loses gossip, keeps signal: can the model translate? reason two steps? follow instructions under pressure?
 
-**renormalization as a way of seeing.** repeat the blur. aggregate parts into wholes, then into bigger wholes. as you coarse-grain, the effective couplings $J$ and fields $h$ **flow**. those flows drift toward **fixed points**: attractors that define **universality classes**. translation: many different microstories yield the same macrostory. magnets, mobs, memes, and models can share a phase diagram because the details that differ get washed out by the blur.
+an **order parameter** is the single dial on the dashboard that tells you which regime you’re in. if the dial is near zero, a capability is effectively off; push past a threshold and it clicks on. think of a linear probe that suddenly starts reading structure from hidden states; think of a social graph where a polarization score vaults from “mixed chatter” to “two camps and a trench.” a **phase** is just the name of the regime where that dial rests—pre-grok and post-grok; unpolarized and echo-locked; metal that shrugs vs. metal that remembers.
 
-**a quick ising reminder (with a field).** take spins $s_i\in\{-1,+1\}$ on the nodes of a graph. neighbors $i,j$ pull on each other via $J_{ij}$; a field $h_i$ pulls on each individual. the *energy* of a configuration $\mathbf{s}$ is
+a **phase transition** is the snap. you turn a tiny knob—more data, a wider model, a curriculum tweak, cooler training—and the macro-behavior jumps. before: the system memorizes trivia and hallucinates structure. after: it composes, reasons, resists noise. the streets didn’t change their layout; the city synchronized.
+
+to understand what synchronizes, it helps to describe who listens to whom. the number $J_{ij}$ is a plain name for *how much node $i$ tries to match or oppose node $j$*. positive $J_{ij}$ is homophily: same neighborhood, same slang, reinforce each other. negative $J_{ij}$ is antagonism: the Internet of Beefs, where attention flows along edges that prefer disagreement. there is also a background nudge $h_i$: the **field** that tilts each node on its own. recommendation systems, market incentives, prompts, and guardrails all act like a field—they lean you before your neighbors even speak.
+
+when many neighbors agree, a **domain** forms: a borough of shared stance. at the seam where two boroughs touch, you get a **domain wall**: a busy, tense boulevard where algorithms farm outrage and rhetoric runs hot. some cities are full of little domains; some split into two giants with a narrow, flammable strip in between.
+
+how touchy is the city? that’s **susceptibility**: if you whisper at one corner, does the dashboard dial barely twitch or swing wildly? and how far does influence travel before it fades to background hum? that’s the **correlation length**: one block, ten blocks, or the whole metro. near the snap point these distances grow; rumors cross rivers; a single spark lights multiple boroughs. that’s why tipping points feel spooky: you did almost nothing, and then everything moved.
+
+now a necessary reminder of the simplest machinery we’re abstracting. take switches $s_i\in\{-1,+1\}$ sitting on a graph. neighbors $i,j$ tug on each other with strength $J_{ij}$; a personal nudge $h_i$ biases each on its own. the system assigns a score to any configuration:
 \[
 E(\mathbf{s})=-\sum_{\langle i,j\rangle}J_{ij}s_is_j-\sum_i h_is_i.
 \]
-low $E$ means “locally satisfied”: friends aligned when $J_{ij}>0$, rivals opposed when $J_{ij}<0$, and individuals tilting with $h_i$. systems tend to wander toward low $E$—not because of moral physics, but because lower-energy arrangements are more numerous or more stable under noise.
+lower $E$ means “the tugs and nudges are more satisfied.” cities drift toward lower $E$ not because they are virtuous, but because noise kicks them around and the arrangements that satisfy more tugs are the ones that last.
 
-**social graphs as spin systems.** treat users as spins on a graph; edges are couplings; the feed/incentives are the field. you get echo-chamber domains, high-tension domain walls, polarization as two giant antialigned regions, and virality as near‑critical avalanches. it’s a working phenomenology that reproduces observed phases and hysteresis in networked behavior.
+**thermodynamics of learning (without the mystique).** training runs at a *temperature*, but here temperature means something you already know how to set: the learning-rate–plus–noise budget. call it $T_{\text{train}}$. high $T_{\text{train}}$ is a hot kitchen—updates jump, the model explores, narrow cul-de-sacs melt away. low $T_{\text{train}}$ is a cool evening—updates settle, the model chooses a wide, comfortable avenue and stays there. there is also the sampling temperature $\tau$ you set at inference; that one only changes how talkative the model is after it has already learned its city map.
 
-**thermodynamics of learning (don’t mix the temperatures).**
-- **$T_{\text{train}}$** — the training thermodynamic temperature: how “hot” sgd runs. high $T_{\text{train}}$ melts you out of narrow minima (exploration). low $T_{\text{train}}$ freezes you into wide basins (generalization).
-- **$\tau$** — the sampling temperature at inference: rescale logits for creative variance. changes *outputs*, not *weights*.
+the loss landscape itself can be coarse-grained into **fast valley directions** and **slow river directions**. fast directions shake out quickly—like furniture rattling into place when you move house. slow directions drift—like deciding which room becomes the studio after living there a while. schedules that start hot and cool later—*annealing*—let furniture settle without deciding the entire floor plan too early. wide valleys generalize because noise spreads evenly across effective directions; brittle cul-de-sacs shatter under the same bumps.
+
+**emergence as a civic event.** in this picture, “it suddenly works” is a citywide re-zoning. add a bit more training data, unlock one more layer, reorder the curriculum, and a measurable dial crosses a threshold: induction appears, long-horizon reasoning stabilizes, tool-use chains hold together. different towns can share the same snap profile because the helicopter variables obey the same few rules even if the street art differs—that is the whole point of coarse-graining.
+
+**practical levers you can actually pull.**
+- *cool or heat $T_{\text{train}}$.* learning rate and batch-size–set noise are the thermostat; warmup–decay is your season change.
+- *rewire the graph.* change who “talks” to whom and with what strength—recommendation edges, collaboration edges, curriculum edges. you’re editing the $J_{ij}$ map.
+- *tilt the field $h_i$.* incentives, prompts, and objectives decide which borough wins when symmetry breaks.
+- *watch the right dial.* track order parameters (simple probes, mutual information, phase-sensitive metrics) instead of drowning in micro-loss. you’re looking for the snap and the spreading distance, not every flicker.
+
+**why this belongs in the ising enigma.** coarse-graining gives the techno-poet a working lens: keep the helicopter variables that govern culture and code; name the dials; notice the snaps. once you do, social platforms and learning systems read like the same kind of city. you navigate them with the same controls: temperature, wiring, and tilt—plus the humility to monitor the boulevard where the domains meet.
+erature at inference: rescale logits for creative variance. changes *outputs*, not *weights*.
 
 coarse-grain the loss landscape into **fast (valley)** and **slow (river)** directions. sgd quickly equilibrates in sharp directions (thermal jiggle) while drifting along flat ones (entropic wander). equipartition‑style behavior shows up: noise contributes roughly per effective degree of freedom, which is why wide valleys generalize and why annealing schedules matter.
 
@@ -341,8 +344,8 @@ the task, now, is to flesh out this program. to do the experiments, to derive th
 ---
 
 ## references
-- McKenzie Wark, *A Hacker Manifesto* (vectoralist class). <https://www.hup.harvard.edu/books/9780674015432>
-- McKenzie Wark, *The Vectoralist Class*. <https://www.e-flux.com/journal/65/336347/the-vectoralist-class>
+- McKenzie Wark, *A Hacker Manifesto* — <https://www.hup.harvard.edu/books/9780674015432>
+- McKenzie Wark, *The Vectoralist Class* — <https://www.e-flux.com/journal/65/336347/the-vectoralist-class>
 - Big data-drive agent-based modeling of online polarized opinions — <https://pubmed.ncbi.nlm.nih.gov/34777981/>
 - Legislatures as spin glasses — <https://www.math.ucla.edu/~mason/research/reid_report_final.pdf>
 - Modeling the Evolution of Complex Genetic Systems: The Gene Network Family Tree — <https://pmc.ncbi.nlm.nih.gov/articles/PMC5528154/>
