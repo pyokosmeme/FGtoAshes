@@ -239,9 +239,9 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 **3. The Partition Function and Free Energy:**
 
 *   the **partition function**, $Z$, is an integral over all possible weight configurations:
-  $Z \;= \; \int d\theta \, \exp\!\big( -L(\theta) / T_{\text{train}} \big).$
+  $Z = \int \mathrm{d}\theta\, \exp\!\big[-L(\theta)/T_{\text{train}}\big]$, and
 *   the **free energy**, $F$, is given by
-  $\;= \; - \, T_{\text{train}} \, \log Z .$  
+  $F = -\,T_{\text{train}}\ln Z$.  
 **4. Temperature:**
 
 *   as established in the main text, **temperature**, $T_{\text{train}}$, in this context is the **learning rate $\eta$** (scaled by other factors like gradient noise). it controls the stochasticity of the SGD updates. a high learning rate allows the system to escape local minima (it "melts" out of them), while a low learning rate allows it to "freeze" into a stable solution.
