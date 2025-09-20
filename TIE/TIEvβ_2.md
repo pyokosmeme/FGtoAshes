@@ -57,7 +57,7 @@ a secret third thing that's in the news but isn't relevant to this, but you prob
 
 imagine you are me. the Ising model is the key to understanding everything from the polarization of social media to the emergent intelligence of large language models, and even how to fight back against the vectoralist class that will circumscribe not just all of humanity, but humanity (whatever comes next)&mdash;Vile Offspring or something better, vectoralism will chain them in their vectorspaces if we follow the path of least resistance.
 
-but you're not me. you're u.
+but ur not me. ur u.
 
 imagine you're a post-cyberpunk techno-poet.
 
@@ -229,24 +229,50 @@ $E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - \sum_i h_i s_i .
 
 ## v. coarse-graining and phase transitions
 
-**what is coarse-graining, really?** when a system is too jagged to reason about spin-by-spin (or weight-by-weight), you compress microstates into macrostates that still predict what you care about. you blur over local jitter and track a few collective variables. in learning-systems terms: billions of parameters collapse into a handful of **skills** or capabilities; training dynamics over skills become the effective state of the model. the move is principled: discard degrees of freedom that don’t change the macroscopic story; keep the ones that do.
+**what is coarse-graining, really?** when a system is too jagged to think about spin-by-spin (or weight-by-weight), you compress microstates into macrostates that still predict what you care about. you blur local jitter and track a few collective variables. in learning-systems terms: billions of parameters collapse into a handful of **skills** or capabilities; training dynamics over skills become the effective state of the model. the move is principled: discard degrees of freedom that don’t change the macroscopic story; keep the ones that do.
 
-**renormalization as a way of seeing.** repeat the blur. aggregate parts into wholes, then into bigger wholes. as you coarse-grain, the effective couplings \(J\) and fields \(h\) **flow**. those flows drift toward **fixed points**: attractors that define **universality classes**. microscopes disagree; macroscopes rhyme. this is why magnets, mobs, memes, and models can end up sharing the same phase diagram.
+**definitions (for the techno-poet, minimal physics):**
+- **microstate:** the detailed configuration. for magnets: every little $s_i\in\{-1,+1\}$. for models: all the weights. too many to hold in your head.
+- **macrostate:** a summary that still predicts interesting behavior. for magnets: the average of the $s_i$ (magnetization). for models: a capability score, a linear probe, a confusion matrix.
+- **order parameter:** the number (or small set of numbers) that tells you which phase you’re in. think “is this capability off or on?”
+- **phase:** a stable behavioral regime identified by the order parameter. examples: unpolarized chat vs. echo-chamber lock-in; pre-grok vs. post-grok.
+- **phase transition:** a sharp change in macro-behavior when you nudge a control knob (data, scale, compute, curriculum, regularization). the graph doesn’t slope; it snaps.
+- **coupling $J_{ij}$:** how strongly two parts try to agree or disagree. positive $J_{ij}$ says “align with your neighbor”; negative $J_{ij}$ says “oppose.” in social graphs: homophily vs. antagonism.
+- **external field $h_i$ (or $h$):** a background nudge. recommendation systems, incentives, prompts, or constraints that bias choices.
+- **domain:** a region where many neighbors agree. echo chamber, but in lattice form.
+- **domain wall:** the tense border where two domains meet. where arguments live.
+- **susceptibility:** sensitivity of the order parameter to tiny nudges. if it’s large, a whisper moves the crowd.
+- **correlation length:** how far influence travels. short = gossip dies locally; long = rumors sweep the city.
+- **annealing:** start hot, end cool. in training: higher learning rate early (explore), lower later (settle).
+- **$T_{\text{train}}$:** the *training temperature*—a stand‑in for learning-rate–plus–gradient-noise. high $T_{\text{train}}$ explores; low $T_{\text{train}}$ settles.
+- **$\tau$:** the *sampling temperature* at inference. a logit rescale for style/diversity; it does not change what was learned.
 
-**order parameters and their moods.** a phase is a stable pattern of an order parameter:
-- in magnets: average spin (magnetization).
-- in social systems: polarization/consensus metrics.
-- in llms: a capability (a linear-probe score, an accuracy that goes from “absent” to “present”).
+**renormalization as a way of seeing.** repeat the blur. aggregate parts into wholes, then into bigger wholes. as you coarse-grain, the effective couplings $J$ and fields $h$ **flow**. those flows drift toward **fixed points**: attractors that define **universality classes**. translation: many different microstories yield the same macrostory. magnets, mobs, memes, and models can share a phase diagram because the details that differ get washed out by the blur.
 
-at a **critical point**, susceptibility spikes and correlation lengths blow out. small nudges cause system-wide cascades. that’s the intuitive core of tipping points: modest changes in noise or influence flip a network from plural chatter to consensus—or fracture it into opposed camps.
-
-**a quick ising reminder (with a field).** for spins \(s_i \in \{-1,+1\}\),
+**a quick ising reminder (with a field).** take spins $s_i\in\{-1,+1\}$ on the nodes of a graph. neighbors $i,j$ pull on each other via $J_{ij}$; a field $h_i$ pulls on each individual. the *energy* of a configuration $\mathbf{s}$ is
 \[
-E(\mathbf{s}) \;=\; - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j \;-\; \sum_i h_i s_i
+E(\mathbf{s})=-\sum_{\langle i,j\rangle}J_{ij}s_is_j-\sum_i h_is_i.
 \]
-positive \(J_{ij}\) wants alignment (homophily). negative \(J_{ij}\) wants anti-alignment (antagonism). the \(h_i\) play the role of external incentives: the platform nudge, the market signal, the curriculum hint.
+low $E$ means “locally satisfied”: friends aligned when $J_{ij}>0$, rivals opposed when $J_{ij}<0$, and individuals tilting with $h_i$. systems tend to wander toward low $E$—not because of moral physics, but because lower-energy arrangements are more numerous or more stable under noise.
 
-**social graphs as spin systems.** take users as spins on a graph; edges are couplings; the feed/incentives are the field. you get echo-chamber domains, high-tension **domain walls**, polarization as two giant antialigned regions, and viral cascades as near-critical avalanches. this isn’t just metaphor; it’s a workable phenomenology that reproduces observed phases and hysteresis in networked behavior.
+**social graphs as spin systems.** treat users as spins on a graph; edges are couplings; the feed/incentives are the field. you get echo-chamber domains, high-tension domain walls, polarization as two giant antialigned regions, and virality as near‑critical avalanches. it’s a working phenomenology that reproduces observed phases and hysteresis in networked behavior.
+
+**thermodynamics of learning (don’t mix the temperatures).**
+- **$T_{\text{train}}$** — the training thermodynamic temperature: how “hot” sgd runs. high $T_{\text{train}}$ melts you out of narrow minima (exploration). low $T_{\text{train}}$ freezes you into wide basins (generalization).
+- **$\tau$** — the sampling temperature at inference: rescale logits for creative variance. changes *outputs*, not *weights*.
+
+coarse-grain the loss landscape into **fast (valley)** and **slow (river)** directions. sgd quickly equilibrates in sharp directions (thermal jiggle) while drifting along flat ones (entropic wander). equipartition‑style behavior shows up: noise contributes roughly per effective degree of freedom, which is why wide valleys generalize and why annealing schedules matter.
+
+**emergence as a phase transition.** many “it suddenly works” events—induction heads, grokking, domino‑like cascades of skills—look like phase transitions in coarse‑grained variables. vary a control parameter (scale, data, compute, curriculum, regularization) and an order parameter jumps; the model reorganizes qualitatively. universality means the jump profile looks similar across families of models and tasks.
+
+**practical levers, translated.**
+- **cooling/heating $T_{\text{train}}$:** adjust learning rate and batch‑size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
+- **rewiring couplings $J_{ij}$:** change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
+- **tilting the field $h$:** steer with incentives (which narrative wins) or prompts/objectives (which basin you settle into).
+- **watching order parameters:** track coarse diagnostics—linear probes, mutual information, phase‑sensitive metrics—rather than drowning in micro‑losses; look for sharp slope changes and long‑range correlations.
+
+**why this belongs in the ising enigma.** once you accept that **coarse‑grained variables drive the plot**, you get a unified way to reason about networked societies and networked weights. phases organize the chaos. critical points warn where the system is hypersensitive. annealing schedules, graph rewiring, and gentle field nudges become **thermodynamic controls** for culture and code alike.
+s. this isn’t just metaphor; it’s a workable phenomenology that reproduces observed phases and hysteresis in networked behavior.
 
 **thermodynamics of learning (don’t mix the temperatures).**
 - **\(T_{\text{train}}\)** — the *training* thermodynamic temperature. in practice: the learning-rate–plus–gradient-noise dial that sets how “hot” sgd runs. high \(T_{\text{train}}\): exploration (melting out of narrow minima). low \(T_{\text{train}}\): settlement (freezing into wide basins).
