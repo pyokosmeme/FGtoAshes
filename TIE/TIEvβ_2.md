@@ -2,9 +2,11 @@
 
 imagine this was a serious substack essay.
 
+```
 Spin glass models are a set of models from statistical physics that are the Kolmogorov complexity of the digital networked complexities, machinic intelligences, and social interactions that describe the post-modern, pre- and post-Long 90s, technosocial order that McKenzie Wark called "vectoralism" in A Hacker Manifesto.
+```
 
-it's a toy model. not literal. a spherical cow in vacuum. tho as the forces of alienation have accelerated, we are all looking a lot more oblate, isolated, and without air. so it's also literal.
+Ising model (spinglass) is a toy model. not literal. a spherical cow in vacuum. tho as the forces of alienation have accelerated, we are all looking a lot more oblate, isolated, and without air. so it's also literal.
 
 it's shorthand for "and now it is ur turn to study statistical mechanics" and "we live in a society" and "explain what large language models are right now, and don't dumb it down or i will fucking kill you." but its also not those things
 
