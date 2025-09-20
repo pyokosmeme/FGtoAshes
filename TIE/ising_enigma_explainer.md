@@ -239,11 +239,6 @@ long‑range correlation | $\xi\sim\|T-T_c\|^{-\nu}$ | viral cascades span netwo
 - **Hysteresis audit.** Chart heating/cooling curves of polarization index as you vary antagonistic coupling and field. Do not expect symmetry.
 - **Training anneal discipline.** Warmup–hold–decay schedules should be chosen to maintain near‑equilibrium in fast directions while letting slow coordinates drift; avoid quenching defects (brittle narrow minima). Monitor probe‑based order parameters, not just average loss (see **Neural Thermodynamic Laws** — [arXiv:2505.10559](https://arxiv.org/abs/2505.10559)).
 
----
-
-## vii. limitations & scope
-
-Not all social phenomena are binary; Potts and continuous‑spin generalizations often matter. Calibration matters. When it’s time to build, fit the model to data and validate the phase diagnostics—don’t stop at poetry.
 
 ---
 
