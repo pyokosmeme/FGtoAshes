@@ -1,4 +1,4 @@
-# THE ISING ENIGMA (Maximal Cut—Restored & Sharpened)
+# THE ISING ENIGMA (Maximal Cut—Restored & Sharpened, Linked)
 
 _imagine this was a serious substack essay._
 
@@ -23,7 +23,7 @@ let's motivate these claims.
 
 ## Temperature legend (pin this)
 
-- $T_{\text{train}}$: **training thermodynamic temperature** induced by learning rate and gradient noise in SGD; appears in the weight‑ensemble $p(\theta)\propto e^{-L(\theta)/T_{\text{train}}}$. Controls exploration vs. settlement during training.
+- $T_{\text{train}}$: **training thermodynamic temperature** induced by learning rate and gradient noise in SGD; appears in the weight‑ensemble $p(\theta)\propto e^{-L(\theta)/T_{\text{train}}}$. Controls exploration vs. settlement during training. See **Neural Thermodynamic Laws for LLM Training** ([arXiv:2505.10559](https://arxiv.org/abs/2505.10559)).
 - $\tau$: **sampling temperature** at inference. Rescales logits; changes output diversity, not the learned energy landscape.
 - $T_{\text{social}}$: **social volatility** proxy (exogenous noise, shock rate). A metaphor useful for opinion dynamics; **distinct** from $T_{\text{train}}$.
 
@@ -49,7 +49,7 @@ we built the disconnection machines, infinite engines of analysis—both silicon
 
 and then, something...different. we asked enough maps to make maps of maps which made more maps of maps of maps of etc.
 
-a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality (surveyed in arXiv:2405.07987). they are all, independently, discovering the cave wall and inferring the shape of the same horse.
+a vision model trained on a billion images and a language model trained on the entire internet begin to agree on whether a "cat" is closer to a "dog" or a "-". they converge. they begin to etch the outlines of what researchers are now calling a **Platonic Representation**: a shared, universal, statistical model of reality (surveyed in **The Platonic Representation Hypothesis** — [arXiv:2405.07987](https://arxiv.org/abs/2405.07987)). they are all, independently, discovering the cave wall and inferring the shape of the same horse.
 
 you could take this representational convergence as an omen in a literal, spiritual, sense. machinic occultism rises in the West. the Singularity Sky rises over the Emperor Norton, i guess.
 
@@ -123,7 +123,7 @@ now, apply this to the digital world. a social network is a giant Ising model. e
 * **Polarization**: two large, opposing domains with few spins in the middle. when negative partisanship strengthens, antiferromagnetic structure wins. hysteresis means “undoing the cause” doesn’t immediately undo the effect.
 * **Going viral** is a cascade of spin flips, a phase transition where a new opinion spreads. the system’s **susceptibility** spikes near the critical point: tiny nudges (a seed post) trigger outsized responses.
 
-this is not just a metaphor: Ising‑class models reproduce the lifecycle of online trends, segregation dynamics, and congressional polarization. see “Selected empirical studies” and “So what” for concrete predictions and interventions.
+this is not just a metaphor: Ising‑class models reproduce the lifecycle of online trends, segregation dynamics, and congressional polarization. for entry points: Castellano et al., “Statistical physics of social dynamics” (_Rev. Mod. Phys._ 2009, review); Gauvin et al., “The Schelling Model of Ethnic Residential Dynamics” (_Phys. Rev. E_ 2009); Nyczka & Sznajd‑Weron (2013, _Phys. Rev. E_).
 
 ---
 
@@ -135,15 +135,15 @@ training an LLM minimizes a loss—an **energy landscape**—over weights. the w
 
 let me make three points before sliding forward:
 
-1. hopfield networks are literally spin‑glass inspired; modern ML sits downstream of that lineage.
-2. transformers can be read as collectives of spin systems (multiple micro‑Ising motifs cooperating).
-3. the SGD↔thermodynamics dictionary now makes this concrete: $T_{\text{train}}$ is set (up to scale) by learning rate and gradient‑noise; warmup/decay = annealing; fast directions equilibrate, slow directions drift; equipartition shows up in wide valleys.
+1. hopfield networks are literally spin‑glass inspired; modern ML sits downstream of that lineage (see Hopfield 1982; Boltzmann Machines; RBMs; Deep Belief Nets).
+2. transformers can be read as collectives of spin systems (see “Transformers Are Secretly Collectives of Spin Systems” — [blog](https://mcbal.github.io/post/transformers-are-secretly-collectives-of-spin-systems/)).
+3. the SGD↔thermodynamics dictionary now makes this concrete: $T_{\text{train}}$ is set (up to scale) by learning rate and gradient‑noise; warmup/decay = annealing; fast directions equilibrate, slow directions drift; equipartition shows up in wide valleys (see **Neural Thermodynamic Laws for LLM Training** — [arXiv:2505.10559](https://arxiv.org/abs/2505.10559)).
 
 - $T_{\text{train}}\uparrow$ → exploration; melt out of brittle minima.  
 - $T_{\text{train}}\downarrow$ → settlement into wide basins.  
 - anneal too fast and you quench—freeze defects in place; anneal thoughtfully and you get robustness.
 
-the **Domino Effect**: capabilities light in sequence. master “A,” and the landscape reshapes, revealing a path to “B,” then “C.” this yields practical knobs (curriculum pacing, optimizer noise, data order) and matches observed scaling behavior.
+the **Domino Effect**: capabilities light in sequence. master “A,” and the landscape reshapes, revealing a path to “B,” then “C.” this yields practical knobs (curriculum pacing, optimizer noise, data order) and matches observed scaling behavior (see **Physics of Skill Learning** — [arXiv:2501.12391](https://arxiv.org/abs/2501.12391)).
 
 ```mermaid
 flowchart LR
@@ -161,6 +161,8 @@ flowchart LR
   Ising-->SG-->Hop
   SG-->BM
 ```
+
+Also see the spin‑glass perspective on in‑context learning (PRE): **Spin‑glass model of in‑context learning** ([Phys. Rev. E](https://journals.aps.org/pre/abstract/10.1103/5l5m-4nk5)).
 
 ---
 
@@ -190,9 +192,9 @@ For LLMs, the effective loss landscape decomposes into:
 - **Fast directions:** sharp valleys where SGD quickly equilibrates (furniture finding its place).  
 - **Slow directions:** flat rivers along which the model drifts entropically (architectural decisions).  
 
-**effective temperature:** $T_{\text{train}}\propto \eta\cdot(\text{gradient noise scale})$.
+**effective temperature:** $T_{\text{train}}\propto \eta\cdot(\text{gradient noise scale})$ (see **Neural Thermodynamic Laws** — [arXiv:2505.10559](https://arxiv.org/abs/2505.10559)).
 
-The domino cascade of skills maps to sequential phase transitions in different order parameters:
+The domino cascade of skills maps to sequential phase transitions in different order parameters (see **Physics of Skill Learning** — [arXiv:2501.12391](https://arxiv.org/abs/2501.12391)):
 - token prediction crosses a threshold → basic pattern matching emerges;  
 - syntactic probes jump → grammar crystallizes;  
 - reasoning benchmarks spike → compositional understanding locks in.
@@ -203,7 +205,7 @@ For social networks, multi‑scale dynamics appear as:
 - **Global:** platform‑wide polarization (symmetry breaking).
 
 **critical signals and control**  
-Near phase transitions, systems exhibit universal warning signs:
+Near phase transitions, systems exhibit universal warning signs. For complex systems and early‑warning signals, see Scheffer et al. (_Nature_ 2009; _Science_ 2012):
 
 Signal | Mathematical form | Social systems | LLMs
 ---|---|---|---
@@ -225,17 +227,17 @@ long‑range correlation | $\xi\sim\|T-T_c\|^{-\nu}$ | viral cascades span netwo
 
 **What does this buy you over other frameworks?**
 
-1. **Early‑warning signals** that general agent models lack: rising variance, autocorrelation, and correlation length near critical points. This lets you forecast virality or polarization before it lands.
-2. **Hysteresis accounting:** after a polarization transition, removing the cause doesn’t rewind the effect. You must cross a different threshold on the way back. That’s intervention‑design, not metaphor.
+1. **Early‑warning signals** that general agent models lack: rising variance, autocorrelation, and correlation length near critical points. This lets you forecast virality or polarization before it lands (cf. Scheffer et al., _Nature_ 2009; _Science_ 2012).
+2. **Hysteresis accounting:** after a polarization transition, removing the cause doesn’t rewind the effect. You must cross a different threshold on the way back. That’s intervention‑design, not metaphor (see Castellano 2009 review for sociophysics hysteresis patterns).
 3. **Minimal knobs with policy bite:** every platform or training policy maps to $(J,h,T)$. You can design counterfactuals and reason about side‑effects (e.g., quenching brittleness vs. slow anneal robustness).
-4. **Bridging silicon↔society:** the same diagnostics (order parameters, susceptibility, correlation length) track both opinion cascades and capability cascades.
+4. **Bridging silicon↔society:** the same diagnostics (order parameters, susceptibility, correlation length) track both opinion cascades and capability cascades (see **Platonic Representation Hypothesis** — [arXiv:2405.07987](https://arxiv.org/abs/2405.07987)).
 
 **Concrete, testable predictions & levers**
 
-- **Susceptibility ridge before a viral flip.** Inject small, controlled “field” $h$ to seed posts and measure response gain. Expect a bulge before the transition; plan content throttles or burst buffers accordingly.
+- **Susceptibility ridge before a viral flip.** Inject small, controlled “field” $h$ to seed posts and measure response gain. Expect a bulge before the transition; plan content throttles or burst buffers accordingly (cf. sociophysics literature above).
 - **Hub‑targeted fielding.** In heavy‑tailed graphs, tilting top‑$k$ degree nodes outperforms random seeding for re‑magnetizing the network. AB‑test interventions on bridge hubs crossing domain walls.
 - **Hysteresis audit.** Chart heating/cooling curves of polarization index as you vary antagonistic coupling and field. Do not expect symmetry.
-- **Training anneal discipline.** Warmup–hold–decay schedules should be chosen to maintain near‑equilibrium in fast directions while letting slow coordinates drift; avoid quenching defects (brittle narrow minima). Monitor probe‑based order parameters, not just average loss.
+- **Training anneal discipline.** Warmup–hold–decay schedules should be chosen to maintain near‑equilibrium in fast directions while letting slow coordinates drift; avoid quenching defects (brittle narrow minima). Monitor probe‑based order parameters, not just average loss (see **Neural Thermodynamic Laws** — [arXiv:2505.10559](https://arxiv.org/abs/2505.10559)).
 
 ---
 
@@ -262,7 +264,7 @@ The “Semiotic Physics” attempt (LessWrong) defined trajectories, states, and
 - $F=-T_{\text{train}}\ln Z$.
 
 **4. Temperature**  
-- $T_{\text{train}}\propto \eta$ up to noise‑scale factors; controls exploration vs. settlement.
+- $T_{\text{train}}\propto \eta$ up to noise‑scale factors; controls exploration vs. settlement (see **Neural Thermodynamic Laws** — [arXiv:2505.10559](https://arxiv.org/abs/2505.10559)).
 - $\tau$ at inference rescales logits; does not change the learned landscape.
 
 **5. Entropy**  
@@ -274,46 +276,48 @@ The “Semiotic Physics” attempt (LessWrong) defined trajectories, states, and
 - Third: as $T_{\text{train}}\to 0$, dynamics freeze; exploration ends.
 
 **7. Phase transitions**  
-- emergent abilities and grokking as phase transitions in coarse‑grained variables; track order parameters (e.g., linear‑probe accuracy).
+- emergent abilities and grokking as phase transitions in coarse‑grained variables; track order parameters (e.g., linear‑probe accuracy) (see **Physics of Skill Learning** — [arXiv:2501.12391](https://arxiv.org/abs/2501.12391)).
 
 ---
 
 ## Selected empirical studies (to anchor the claims)
 
 **Political Polarization & Opinion Dynamics**
-- Castellano et al., “Statistical physics of social dynamics,” _Rev. Mod. Phys._ (2009).
-- Hołyst & Kacperski, “Phase transitions in social impact models of opinion formation,” _Physica A_ (2000).
+- Castellano et al., “Statistical physics of social dynamics,” _Rev. Mod. Phys._ (2009).  
+- Hołyst & Kacperski, “Phase transitions in social impact models of opinion formation,” _Physica A_ (2000).  
 - Sornette & Zhou, “Ising model of financial markets with herding” (2006).
 
 **Network Segregation & Echo Chambers**
-- Gauvin et al., “Schelling model of ethnic residential dynamics,” _Phys. Rev. E_ (2009).
+- Gauvin et al., “Schelling model of ethnic residential dynamics,” _Phys. Rev. E_ (2009).  
 - Nyczka & Sznajd‑Weron, “Phase transition in the social impact model of opinion formation,” _Phys. Rev. E_ (2013).
 
 **Collective Behavior & Social Contagion**
-- Kenna & Berche, “Critical mass and research quality vs. group size,” _Scientometrics_ (2011).
+- Kenna & Berche, “Critical mass and research quality vs. group size,” _Scientometrics_ (2011).  
 - de Arruda et al., “Social contagion on hypergraphs,” _Phys. Rev. Research_ (2020).
 
 **Early‑warning signals**
-- Scheffer et al., _Nature_ (2009); Scheffer et al., _Science_ (2012).
+- Scheffer et al., “Early warning of critical transitions from critical slowing down,” _Nature_ (2009).  
+- Scheffer et al., “Anticipating critical transitions,” _Science_ (2012).
 
 ---
 
 ## references
-- McKenzie Wark, *A Hacker Manifesto* — https://www.hup.harvard.edu/books/9780674015432
-- McKenzie Wark, *The Vectoralist Class* — https://www.e-flux.com/journal/65/336347/the-vectoralist-class
-- Big data-drive agent-based modeling of online polarized opinions — https://pubmed.ncbi.nlm.nih.gov/34777981/
-- Legislatures as spin glasses — https://www.math.ucla.edu/~mason/research/reid_report_final.pdf
-- Modeling the Evolution of Complex Genetic Systems: The Gene Network Family Tree — https://pmc.ncbi.nlm.nih.gov/articles/PMC5528154/
-- Transformers Are Secretly Collectives of Spin Systems — https://mcbal.github.io/post/transformers-are-secretly-collectives-of-spin-systems/
-- Spin-glass model of in-context learning — https://journals.aps.org/pre/abstract/10.1103/5l5m-4nk5
-- Neural Thermodynamic Laws for Large Language Model Training — arXiv:2505.10559 — https://arxiv.org/abs/2505.10559
-- Physics of Skill Learning — arXiv:2501.12391 — https://arxiv.org/abs/2501.12391
-- The Platonic Representation Hypothesis — arXiv:2405.07987 — https://arxiv.org/abs/2405.07987
-- Semiotic Physics (LessWrong seminar sequence) — https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped
+- McKenzie Wark, *A Hacker Manifesto* — <https://www.hup.harvard.edu/books/9780674015432>
+- McKenzie Wark, *The Vectoralist Class* — <https://www.e-flux.com/journal/65/336347/the-vectoralist-class>
+- Big data-drive agent-based modeling of online polarized opinions — <https://pubmed.ncbi.nlm.nih.gov/34777981/>
+- Legislatures as spin glasses — <https://www.math.ucla.edu/~mason/research/reid_report_final.pdf>
+- Modeling the Evolution of Complex Genetic Systems: The Gene Network Family Tree — <https://pmc.ncbi.nlm.nih.gov/articles/PMC5528154/>
+- Transformers Are Secretly Collectives of Spin Systems — <https://mcbal.github.io/post/transformers-are-secretly-collectives-of-spin-systems/>
+- Spin-glass model of in-context learning — <https://journals.aps.org/pre/abstract/10.1103/5l5m-4nk5>
+- Neural Thermodynamic Laws for Large Language Model Training — **arXiv:2505.10559** — <https://arxiv.org/abs/2505.10559>
+- Physics of Skill Learning — **arXiv:2501.12391** — <https://arxiv.org/abs/2501.12391>
+- The Platonic Representation Hypothesis — **arXiv:2405.07987** — <https://arxiv.org/abs/2405.07987>
+- Semiotic Physics (LessWrong seminar sequence) — <https://www.lesswrong.com/posts/TTn6vTcZ3szBctvgb/simulators-seminar-sequence-2-semiotic-physics-revamped>
 
 ---
 
 ### changelog
+- Embedded inline links for all directly referenced papers/essays and aligned them with the references section.
 - Restored long‑form voice and most original passages; tightened only where redundant or conflicting.
 - Kept mermaid lineage diagram; retained the philosophical tone.
 - Standardized temperatures and removed earlier redundant coarse‑graining fragments.
