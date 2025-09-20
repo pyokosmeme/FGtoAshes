@@ -254,7 +254,7 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 
 **6. The Laws of Thermodynamics:**
 
-*   **First Law (Conservation of Energy):** the change in the model's loss ($ \Delta L $) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). $\Delta L = W + Q$.
+*   **First Law (Conservation of Energy):** the change in the model's loss ($ \Delta L $) is equal to the work done on it by the optimizer (the deterministic part of the gradient update) plus the heat exchanged with the environment (the random part of the update due to stochastic gradients). $ \Delta L = W + Q$.
 *   **Second Law (Entropy Increases):** an isolated system tends towards maximum entropy. in LLM training, this manifests as the entropic force pushing the model towards wider, more generalizable minima. it explains why models often find solutions that are simpler than they strictly need to be to fit the training data.
 *   **Third Law (Entropy at Absolute Zero):** as the temperature (learning rate) approaches zero, the system freezes into a single ground state. SGD becomes pure gradient descent, and the model loses its ability to explore.
 
@@ -262,7 +262,7 @@ we can do better. by using the dictionary provided by **[Neural Thermodynamic La
 
 *   **emergent abilities** and **grokking** are **phase transitions**. as a control parameter (model size, data size, compute) is varied, the system can undergo a sudden, qualitative change in its behavior, moving from a disordered phase (memorizing the data) to an ordered phase (generalizing). we can use the tools of statistical mechanics, like the study of critical exponents and universality classes, to analyze these transitions.
 
-**(added empirical cue):** track an order parameter such as linear-probe accuracy $ A_{\text{probe}}(t) $ or mutual information; sharp slope changes vs. a control variable (data, params, compute) indicate criticality (see **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** for a domino-like progression of capabilities).
+**(added empirical cue):** track an order parameter such as linear-probe accuracy $A_{\text{probe}}(t)$ or mutual information; sharp slope changes vs. a control variable (data, params, compute) indicate criticality (see **[Physics of Skill Learning](https://arxiv.org/abs/2501.12391)** for a domino-like progression of capabilities).
 
 this thermodynamic framework is not just a new set of metaphors. it is a research program. it gives us a set of quantitative tools to analyze the behavior of LLMs, to make testable predictions, and to design better training algorithms. it allows us to see these models not as inscrutable oracles, but as complex, physical systems that are, in principle, understandable.
 
