@@ -261,6 +261,7 @@ the task, now, is to flesh out this program. to do the experiments, to derive th
 ---
 
 ## references
+- McKenzie Wark, *A Hacker Manifesto* (vectoralist class). <https://www.hup.harvard.edu/books/9780674015432>
 - Big data-drive agent-based modeling of online polarized opinions — <https://pubmed.ncbi.nlm.nih.gov/34777981/>
 - Legislatures as spin glasses — <https://www.math.ucla.edu/~mason/research/reid_report_final.pdf>
 - Modeling the Evolution of Complex Genetic Systems: The Gene Network Family Tree — <https://pmc.ncbi.nlm.nih.gov/articles/PMC5528154/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExWjJ3QWlpS3FFekpTVnVRYQEeHtqP0_mdeWUF_rYZmMZc0Y7d2_ynrq-5SR7b6hiO7Ep5zCixtQFvUO7vZFQ_aem_xu7096cE_py3fe_1L19jdQ>
