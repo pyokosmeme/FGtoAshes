@@ -221,9 +221,7 @@ $$
 - $E(\mathbf{s})$ — energy of configuration $\mathbf{s}=(s_1,\dots,s_N)$; lower $E$ = more favored configuration.
 
 *Variant:* site-dependent fields $h_i$ give
-$
-E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - \sum_i h_i s_i .
-$
+$E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - \sum_i h_i s_i .$
 
 ---
 
