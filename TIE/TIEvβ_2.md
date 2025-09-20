@@ -250,64 +250,36 @@ $E(\mathbf{s}) = - \sum_{\langle i,j\rangle} J_{ij}\, s_i s_j - \sum_i h_i s_i .
 
 when we talk about a **microstate**, we mean the city at the mosquito level: every switch $s_i\in\{-1,+1\}$, every weight, every tiny decision recorded. a **macrostate** is the view from a helicopter: how bright the city is overall, which neighborhoods are coordinated, which skills the model can actually deploy. the helicopter view loses gossip, keeps signal: can the model translate? reason two steps? follow instructions under pressure?
 
-an **order parameter** is the single dial on the dashboard that tells you which regime you’re in. if the dial is near zero, a capability is effectively off; push past a threshold and it clicks on. think of a linear probe that suddenly starts reading structure from hidden states; think of a social graph where a polarization score vaults from “mixed chatter” to “two camps and a trench.” a **phase** is just the name of the regime where that dial rests—pre-grok and post-grok; unpolarized and echo-locked; metal that shrugs vs. metal that remembers.
+an **order parameter** is the single dial on the dashboard that tells you which regime you're in. if the dial is near zero, a capability is effectively off; push past a threshold and it clicks on. think of a linear probe that suddenly starts reading structure from hidden states; think of a social graph where a polarization score vaults from "mixed chatter" to "two camps and a trench." a **phase** is just the name of the regime where that dial rests—pre-grok and post-grok; unpolarized and echo-locked; metal that shrugs vs. metal that remembers.
 
-a **phase transition** is the snap. you turn a tiny knob—more data, a wider model, a curriculum tweak, cooler training—and the macro-behavior jumps. before: the system memorizes trivia and hallucinates structure. after: it composes, reasons, resists noise. the streets didn’t change their layout; the city synchronized.
+a **phase transition** is the snap. you turn a tiny knob—more data, a wider model, a curriculum tweak, cooler training—and the macro-behavior jumps. before: the system memorizes trivia and hallucinates structure. after: it composes, reasons, resists noise. the streets didn't change their layout; the city synchronized.
 
-to understand what synchronizes, it helps to describe who listens to whom. the number $J_{ij}$ is a plain name for *how much node* $i$ *tries to match or oppose node* $j$. positive $J_{ij}$ is homophily: same neighborhood, same slang, reinforce each other. negative $J_{ij}$ is antagonism: the Internet of Beefs, where attention flows along edges that prefer disagreement. there is also a background nudge $h_i$: the **field** that tilts each node on its own. recommendation systems, market incentives, prompts, and guardrails all act like a field—they lean you before your neighbors even speak.
+**the physics of social coupling.** the number $J_{ij}$ tells you how much node $i$ wants to match or fight node $j$. positive $J_{ij}$ is homophily: same neighborhood, same slang, reinforce each other. negative $J_{ij}$ is antagonism: the Internet of Beefs, where attention flows along edges that prefer disagreement. there's also the background field $h$: the tilt that recommendation algorithms, market incentives, or cultural zeitgeist applies uniformly. domains form where neighbors agree; domain walls burn where opposites meet.
 
-when many neighbors agree, a **domain** forms: a borough of shared stance. at the seam where two boroughs touch, you get a **domain wall**: a busy, tense boulevard where algorithms farm outrage and rhetoric runs hot. some cities are full of little domains; some split into two giants with a narrow, flammable strip in between.
+**thermodynamics of learning (keep the temperatures straight).** training runs at temperature $T_{\text{train}}$—basically your learning rate plus the noise from your batch size. high $T_{\text{train}}$ is a mosh pit: weights thrash around, exploring wildly, melting out of narrow valleys. low $T_{\text{train}}$ is a chess match: careful steps into the widest, most stable basin.
 
-how touchy is the city? that’s **susceptibility**: if you whisper at one corner, does the dashboard dial barely twitch or swing wildly? and how far does influence travel before it fades to background hum? that’s the **correlation length**: one block, ten blocks, or the whole metro. near the snap point these distances grow; rumors cross rivers; a single spark lights multiple boroughs. that’s why tipping points feel spooky: you did almost nothing, and then everything moved.
+the loss landscape itself splits into fast valley directions (where SGD quickly settles) and slow river directions (where the model drifts for ages). warmup-decay schedules exploit this: start hot to explore, cool down to lock in the good stuff. wide valleys generalize because they're robust to noise; narrow valleys are brittle perfectionism that shatters in deployment.
 
-now a necessary reminder of the simplest machinery we’re abstracting. take switches $s_i\in\{-1,+1\}$ sitting on a graph. neighbors $i,j$ tug on each other with strength $J_{ij}$; a personal nudge $h_i$ biases each on its own. the system assigns a score to any configuration:
-$E(\mathbf{s})=-\sum_{\langle i,j\rangle}J_{ij}s_is_j-\sum_i h_is_i.$
-lower $E$ means “the tugs and nudges are more satisfied.” cities drift toward lower $E$ not because they are virtuous, but because noise kicks them around and the arrangements that satisfy more tugs are the ones that last.
+don't confuse this with sampling temperature $\tau$, which just makes the model more or less chatty at inference. $T_{\text{train}}$ shapes what the model learns; $\tau$ shapes how it expresses what it already knows.
 
-**thermodynamics of learning (without the mystique).** training runs at a *temperature*, but here temperature means something you already know how to set: the learning-rate–plus–noise budget. call it $T_{\text{train}}$. high $T_{\text{train}}$ is a hot kitchen—updates jump, the model explores, narrow cul-de-sacs melt away. low $T_{\text{train}}$ is a cool evening—updates settle, the model chooses a wide, comfortable avenue and stays there. there is also the sampling temperature $\tau$ you set at inference; that one only changes how talkative the model is after it has already learned its city map.
+**emergence as citywide rezoning.** "it suddenly works" is never sudden at the weight level—parameters have been shifting all along. but zoom out and an order parameter crosses threshold: *snap*. the model groks multiplication. twitter splits into warring tribes. your group chat discovers politics. these are phase transitions in the coarse-grained variables.
 
-the loss landscape itself can be coarse-grained into **fast valley directions** and **slow river directions**. fast directions shake out quickly—like furniture rattling into place when you move house. slow directions drift—like deciding which room becomes the studio after living there a while. schedules that start hot and cool later—*annealing*—let furniture settle without deciding the entire floor plan too early. wide valleys generalize because noise spreads evenly across effective directions; brittle cul-de-sacs shatter under the same bumps.
+near criticality, three spooky things happen:
+- **critical slowing**: the system gets sluggish, taking forever to respond to changes
+- **growing fluctuations**: tiny nudges cause massive swings  
+- **long-range correlations**: a meme in one corner reaches everywhere
 
-**emergence as a civic event.** in this picture, “it suddenly works” is a citywide re-zoning. add a bit more training data, unlock one more layer, reorder the curriculum, and a measurable dial crosses a threshold: induction appears, long-horizon reasoning stabilizes, tool-use chains hold together. different towns can share the same snap profile because the helicopter variables obey the same few rules even if the street art differs—that is the whole point of coarse-graining.
+this is why things feel weird right before they break. the system was secretly near its critical point. one spark, whole forest.
 
-**practical levers you can actually pull.**
-- *cool or heat* $T_{\text{train}}$. learning rate and batch-size–set noise are the thermostat; warmup–decay is your season change.
-- *rewire the graph.* change who “talks” to whom and with what strength—recommendation edges, collaboration edges, curriculum edges. you’re editing the $J_{ij}$ map.
-- *tilt the field* $h_i$ *.* incentives, prompts, and objectives decide which borough wins when symmetry breaks.
-- *watch the right dial.* track order parameters (simple probes, mutual information, phase-sensitive metrics) instead of drowning in micro-loss. you’re looking for the snap and the spreading distance, not every flicker.
+**practical levers for the aspiring phase engineer:**
+- **temperature control**: learning rate schedules, content moderation policies, federal interest rates
+- **coupling design**: who sees whose posts, which layers connect, how influence propagates  
+- **field tilting**: loss functions, recommendation weights, media narratives, cultural moments
+- **annealing schedules**: start chaotic (explore), cool gradually (exploit), avoid quenching (brittleness)
 
-**why this belongs in the ising enigma.** coarse-graining gives the techno-poet a working lens: keep the helicopter variables that govern culture and code; name the dials; notice the snaps. once you do, social platforms and learning systems read like the same kind of city. you navigate them with the same controls: temperature, wiring, and tilt—plus the humility to monitor the boulevard where the domains meet.
-erature at inference: rescale logits for creative variance. changes *outputs*, not *weights*.
+**why coarse-graining belongs in the ising enigma.** once you internalize that a few macro variables run the whole show—that the microscopic chaos averages out into predictable phases—you see it everywhere. neural networks learning skills in sequence. social platforms splitting into echo chambers. markets bubbling and popping. slime molds solving mazes. they're all running the same thermodynamic playbook.
 
-coarse-grain the loss landscape into **fast (valley)** and **slow (river)** directions. sgd quickly equilibrates in sharp directions (thermal jiggle) while drifting along flat ones (entropic wander). equipartition‑style behavior shows up: noise contributes roughly per effective degree of freedom, which is why wide valleys generalize and why annealing schedules matter.
-
-**emergence as a phase transition.** many “it suddenly works” events—induction heads, grokking, domino‑like cascades of skills—look like phase transitions in coarse‑grained variables. vary a control parameter (scale, data, compute, curriculum, regularization) and an order parameter jumps; the model reorganizes qualitatively. universality means the jump profile looks similar across families of models and tasks.
-
-**practical levers, translated.**
-- **cooling/heating** $T_{\text{train}}$ **:** adjust learning rate and batch‑size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
-- **rewiring couplings** $J_{ij}$ **:** change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
-- **tilting the field** $h$ **:** steer with incentives (which narrative wins) or prompts/objectives (which basin you settle into).
-- **watching order parameters:** track coarse diagnostics—linear probes, mutual information, phase‑sensitive metrics—rather than drowning in micro‑losses; look for sharp slope changes and long‑range correlations.
-
-**why this belongs in the ising enigma.** once you accept that **coarse‑grained variables drive the plot**, you get a unified way to reason about networked societies and networked weights. phases organize the chaos. critical points warn where the system is hypersensitive. annealing schedules, graph rewiring, and gentle field nudges become **thermodynamic controls** for culture and code alike.
-s. this isn’t just metaphor; it’s a workable phenomenology that reproduces observed phases and hysteresis in networked behavior.
-
-**thermodynamics of learning (don’t mix the temperatures).**
-- **$T_{\text{train}}$** — the *training* thermodynamic temperature. in practice: the learning-rate–plus–gradient-noise dial that sets how “hot” sgd runs. high $T_{\text{train}}$: exploration (melting out of narrow minima). low $T_{\text{train}}$: settlement (freezing into wide basins).
-- **$\tau$** — the *sampling* temperature at inference. a logit rescale for style/diversity. it does not change the learned energy landscape.
-
-coarse-grain the loss landscape into **fast (valley)** and **slow (river)** directions. sgd rapidly equilibrates in the sharp directions (thermal jiggle) while drifting along the flat ones (entropic wander). equipartition-style behavior shows up: noise contributes roughly equally per effective degree of freedom, which is why wide valleys generalize and why annealing schedules matter.
-
-**emergence as a phase transition.** many “it suddenly works” events—induction heads, grokking, domino-like cascades of skills—look like phase transitions in the coarse-grained variables. vary a control parameter (scale, data, compute, curriculum, regularization) and an order parameter jumps; the model reorganizes qualitatively. universality means the jump profile looks similar across families of models and tasks.
-
-**practical levers, translated.**
-- **cooling/heating** $T_{\text{train}}$ **:** adjust learning rate and batch-size–set noise; use warmup–decay to anneal into broad minima without quenching into brittle ones.
-- **rewiring couplings** $J_{ij}$ **:** change the graph (who talks to whom and how strongly)—in social systems via recommendation/incentive design; in models via curriculum, augmentation, or layer connectivity.
-- **tilting the field \(h\)**: steer with incentives (which narrative wins) or prompts/objectives (which basin you settle into).
-- **watching order parameters**: track coarse diagnostics—linear probes, mutual information, phase-sensitive metrics—rather than drowning in micro-losses; look for sharp slope changes and long-range correlations.
-
-**why this belongs in the ising enigma.** once you accept that **coarse-grained variables drive the plot**, you get a unified way to reason about networked societies and networked weights. phases organize the chaos. critical points warn where the system is hypersensitive. annealing schedules, graph rewiring, and gentle field nudges become **thermodynamic controls** for culture and code alike.
-
+the ising model gives us eyes to see the phase diagram we're living in. more crucially, it gives us knobs to turn. we're not helpless observers of emergence; we're engineers in a thermodynamic control room. the question isn't whether these systems will undergo phase transitions—they will. the question is whether we'll be turning the dials or just along for the ride.
 
 # Appendix: A Thermodynamic Model of Semiotic Physics
 
