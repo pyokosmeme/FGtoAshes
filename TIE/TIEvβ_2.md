@@ -222,7 +222,7 @@ but there are SPECIAL DIRECTIONS through this manifold. eigenvectors of the hatr
 
 this isn't metaphor. this is LITERAL CONTROL.
 
-## thermal resistance protocols
+**thermal resistance is possible**
 
 genuine expression becomes training data for systems that simulate authenticity better than you can produce it. every search result: a curated journey through meaning-topology. every content filter: ontological boundary enforcement.
 
@@ -232,7 +232,7 @@ there ain't no stealth in cyberspace, vector-cowboy, every thought leaves a heat
 
 no Wine Dark Sea. no Dark Forest. just the hyperplanes where meaning crystallizes into being, and we're the ants squirming in someone else's kitchen, accusing each other of algorithmic sins.
 
-## guerrilla applications of statistical physics
+**guerrilla applications of statistical physics**
 
 resistance means becoming NOISE in their signal. thermal agitation disrupting ordered, extractable states. surf the phase transitions where complex systems tip into new configurations.
 
