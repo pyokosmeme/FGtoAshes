@@ -89,7 +89,7 @@ E is the total energy. E is like water. water is like information. everything fl
 
 the total "energy" of the system is a measure of how misaligned the spins are. the lower the energy, the more the spins are arranged in a way that satisfies their local interactions. systems, like life, find a way to minimize energy.
 
-low E, for lack of a better word, is good. low E is right, low E works. low E clarifies, cuts through the devolution post-modern digital insanity and clarifies yoyou're place in the universe.
+low E, for lack of a better word, is good. low E is right, low E works. low E clarifies, cuts through the devolution post-modern digital insanity and clarifies you're place in the universe.
 
 now, here's the magic ingredient: **temperature**.
 
@@ -115,7 +115,7 @@ $T_{\text{social}}$ is not the same object as the training temperature $T_{\text
 
 we can also have systems with random, conflicting interactions. these are called **spin glasses**. in a spin glass, you have a mix of ferromagnetic and antiferromagnetic couplings. it's impossible to satisfy all the interactions at once. the system gets "stuck" in a multitude of metastable states, a rugged energy landscape with many valleys. this is a much better model for complex social systems, with their tangled webs of alliances and rivalries, and for the loss landscapes of LLMs.
 
-one last thing: you ever wonder why a compass points north? the Earth is a big magnet, and smaller magnets align to the fields of bigger magnets. crude, but effective description. changing what we define as the Inside and the Outside is as critical to physics as it is to [Outsidness Engines](https://github.com/pyokosmeme/FGtoAshes/blob/main/ONE.md) of network states. oyou're take away is states align to something outside their locality. we will call this the external magnetic field (imagine you are a compass, aligning to the Earth's magnetosphere, gleefully; if yoyou're coupling constant is positive, being out of alignment makes you sad, being aligned makes you happy).
+one last thing: you ever wonder why a compass points north? the Earth is a big magnet, and smaller magnets align to the fields of bigger magnets. crude, but effective description. changing what we define as the Inside and the Outside is as critical to physics as it is to [Outsidness Engines](https://github.com/pyokosmeme/FGtoAshes/blob/main/ONE.md) of network states. oyou're take away is states align to something outside their locality. we will call this the external magnetic field (imagine you are a compass, aligning to the Earth's magnetosphere, gleefully; if you're coupling constant is positive, being out of alignment makes you sad, being aligned makes you happy).
 
 
 ---
