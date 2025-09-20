@@ -238,7 +238,7 @@ an **order parameter** is the single dial on the dashboard that tells you which 
 
 a **phase transition** is the snap. you turn a tiny knob—more data, a wider model, a curriculum tweak, cooler training—and the macro-behavior jumps. before: the system memorizes trivia and hallucinates structure. after: it composes, reasons, resists noise. the streets didn’t change their layout; the city synchronized.
 
-to understand what synchronizes, it helps to describe who listens to whom. the number $J_{ij}$ is a plain name for *how much node $i$ tries to match or oppose node $j$*. positive $J_{ij}$ is homophily: same neighborhood, same slang, reinforce each other. negative $J_{ij}$ is antagonism: the Internet of Beefs, where attention flows along edges that prefer disagreement. there is also a background nudge $h_i$: the **field** that tilts each node on its own. recommendation systems, market incentives, prompts, and guardrails all act like a field—they lean you before your neighbors even speak.
+to understand what synchronizes, it helps to describe who listens to whom. the number $J_{ij}$ is a plain name for *how much node* $i$ *tries to match or oppose node* $j$. positive $J_{ij}$ is homophily: same neighborhood, same slang, reinforce each other. negative $J_{ij}$ is antagonism: the Internet of Beefs, where attention flows along edges that prefer disagreement. there is also a background nudge $h_i$: the **field** that tilts each node on its own. recommendation systems, market incentives, prompts, and guardrails all act like a field—they lean you before your neighbors even speak.
 
 when many neighbors agree, a **domain** forms: a borough of shared stance. at the seam where two boroughs touch, you get a **domain wall**: a busy, tense boulevard where algorithms farm outrage and rhetoric runs hot. some cities are full of little domains; some split into two giants with a narrow, flammable strip in between.
 
@@ -257,7 +257,7 @@ the loss landscape itself can be coarse-grained into **fast valley directions** 
 **practical levers you can actually pull.**
 - *cool or heat* $T_{\text{train}}$. learning rate and batch-size–set noise are the thermostat; warmup–decay is your season change.
 - *rewire the graph.* change who “talks” to whom and with what strength—recommendation edges, collaboration edges, curriculum edges. you’re editing the $J_{ij}$ map.
-- *tilt the field $h_i$.* incentives, prompts, and objectives decide which borough wins when symmetry breaks.
+- *tilt the field* $h_i$ *.* incentives, prompts, and objectives decide which borough wins when symmetry breaks.
 - *watch the right dial.* track order parameters (simple probes, mutual information, phase-sensitive metrics) instead of drowning in micro-loss. you’re looking for the snap and the spreading distance, not every flicker.
 
 **why this belongs in the ising enigma.** coarse-graining gives the techno-poet a working lens: keep the helicopter variables that govern culture and code; name the dials; notice the snaps. once you do, social platforms and learning systems read like the same kind of city. you navigate them with the same controls: temperature, wiring, and tilt—plus the humility to monitor the boulevard where the domains meet.
